@@ -13,12 +13,12 @@
     <TextView
         android:layout_width="300dp"
         android:layout_height="82dp"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:text="MUSIC PLAYER"
-        android:textStyle="bold"
         android:textColor="@color/white"
-        android:fontFamily="monospace"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
