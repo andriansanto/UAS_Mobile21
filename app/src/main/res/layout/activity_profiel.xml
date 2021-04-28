@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/back4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="PROFILE SAYA"
+        android:textSize="25dp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/profile"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:text="NIM : 0000002712 Nama : Zefanya Wijaya                   Kelas : EL"/>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="left"
+        android:text="  Referensi : "
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="monospace"/>
+    <TextView
+
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="Youtube :https://www.youtube.com/watch?v=q7TETeyChhw"
+        android:textColor="@color/white"
+        android:fontFamily="monospace"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="Youtube :https://www.youtube.com/watch?v=bgIUdb-7Rqo"
+        android:textColor="@color/white"
+        android:fontFamily="monospace"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:text="Website :https://guides.codepath.com/android/Working-with-the-EditText"
+        android:textColor="@color/white"
+        android:fontFamily="monospace"/>
+
+
+
+
+
+</LinearLayout>
