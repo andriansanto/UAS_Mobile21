@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Uas_mobile">
         <activity android:name=".Home_activity" android:configChanges="orientation|screenSize"/>
-        <activity android:name=".login_activity" />
+        <activity android:name=".Login_activity" />
         <activity android:name=".credit_activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
