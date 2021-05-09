@@ -1,79 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/back4"
-    tools:context=".MainActivity">
+    android:padding="24dp"
+    tools:context=".MainActivity"
+    android:background="@color/birudongker">
 
-    <TextView
-        android:gravity="center"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:text="PROFILE SAYA"
-        android:textSize="25dp"
-        android:fontFamily="monospace"
-        android:textStyle="bold"
-        android:textColor="@color/white"/>
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:src="@drawable/profile"/>
-    <TextView
-        android:layout_marginTop="20dp"
-        android:gravity="left"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:textColor="@color/white"
-        android:text="NIM : 0000002712 Nama : Zefanya Wijaya                   Kelas : EL"/>
-    <TextView
-        android:layout_marginTop="20dp"
+<!--    Meet-->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_gravity="left"
-        android:text="  Referensi : "
-        android:textSize="15dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:fontFamily="monospace"/>
-    <TextView
+        android:layout_height="wrap_content">
 
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:textSize="15dp"
-        android:gravity="left"
-        android:text="Youtube :https://www.youtube.com/watch?v=q7TETeyChhw"
-        android:textColor="@color/white"
-        android:fontFamily="monospace"/>
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:textSize="15dp"
-        android:gravity="left"
-        android:text="Youtube :https://www.youtube.com/watch?v=bgIUdb-7Rqo"
-        android:textColor="@color/white"
-        android:fontFamily="monospace"/>
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_width="400dp"
-        android:layout_height="50dp"
-        android:textSize="15dp"
-        android:gravity="left"
-        android:text="Website :https://guides.codepath.com/android/Working-with-the-EditText"
-        android:textColor="@color/white"
-        android:fontFamily="monospace"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="Meet Our Team"
+            android:textColor="@color/kuning"
+            android:textSize="24dp"></TextView>
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/Icon_Home">
+
+        </ImageView>
+    </RelativeLayout>
+<!--Meet-->
+
+<!--    Zefanya-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="22dp"
+        android:background="@color/biru">
+
+        <ImageView
+            android:id="@+id/profile_zefanya"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/profile"></ImageView>
+
+        <TextView
+            android:id="@+id/name_zefanya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/profile_zefanya"
+            android:fontFamily="@font/baloo"
+            android:text="Zefanya Wijaya"
+            android:textColor="@color/black"
+            android:textSize="22dp"></TextView>
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_zefanya"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-6dp"
+            android:layout_toRightOf="@+id/profile_zefanya"
+            android:fontFamily="@font/montserrat"
+            android:text="00000027182"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_zefanya"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/profile_zefanya"
+            android:fontFamily="@font/montserrat"
+            android:text="Font-End Developer"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+    </RelativeLayout>
+<!--Zefanya-->
+
+    <!--Andrian-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="22dp"
+        android:background="@color/biru">
+
+        <ImageView
+            android:id="@+id/profile_ask"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/profile_ask"></ImageView>
+
+        <TextView
+            android:id="@+id/name_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/profile_ask"
+            android:fontFamily="@font/baloo"
+            android:text="Andrian Santo"
+            android:textColor="@color/black"
+            android:textSize="22dp"></TextView>
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_ask"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-6dp"
+            android:layout_toRightOf="@+id/profile_ask"
+            android:fontFamily="@font/montserrat"
+            android:text="00000027833"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_ask"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/profile_ask"
+            android:fontFamily="@font/montserrat"
+            android:text="Font-End Developer"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+    </RelativeLayout>
+    <!--Andrian-->
+
+    <!--James-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="22dp"
+        android:background="@color/biru">
+
+        <ImageView
+            android:id="@+id/profile_james"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/profile"></ImageView>
+
+        <TextView
+            android:id="@+id/name_james"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/profile_james"
+            android:fontFamily="@font/baloo"
+            android:text="James Leopold"
+            android:textColor="@color/black"
+            android:textSize="22dp"></TextView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_james"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-6dp"
+            android:layout_toRightOf="@+id/profile_james"
+            android:fontFamily="@font/montserrat"
+            android:text="00000026766"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_james"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/profile_james"
+            android:fontFamily="@font/montserrat"
+            android:text="Back-End Developer"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+    </RelativeLayout>
+    <!--James-->
+
+    <!--Dwynn-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="22dp"
+        android:background="@color/biru">
+
+        <ImageView
+            android:id="@+id/profile_dwynn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/profile"></ImageView>
+
+        <TextView
+            android:id="@+id/name_dwynn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/profile_dwynn"
+            android:fontFamily="@font/baloo"
+            android:text="Dwynn Tama"
+            android:textColor="@color/black"
+            android:textSize="22dp"></TextView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_dwynn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="-6dp"
+            android:layout_toRightOf="@+id/profile_dwynn"
+            android:fontFamily="@font/montserrat"
+            android:text="00000028024"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_dwynn"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/profile_dwynn"
+            android:fontFamily="@font/montserrat"
+            android:text="Back-End Developer"
+            android:textColor="#ffff"
+            android:textSize="16dp"></TextView>
+
+    </RelativeLayout>
+    <!--Dwynn-->
+
+
+<!--        </ImageView>-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_toRightOf="@id/icon_ar"-->
+<!--            android:text="Colections"-->
+<!--            android:textColor="#202020"-->
+<!--            android:textSize="20dp"></TextView>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="16dp"-->
+<!--            android:layout_height="16dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@drawable/Icon_Rewards">-->
+
+<!--        </ImageView> //relative-->
+
+    </RelativeLayout>
 
 </LinearLayout>
