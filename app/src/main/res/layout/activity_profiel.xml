@@ -46,7 +46,7 @@
             android:layout_height="60dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
-            android:src="@drawable/profile"></ImageView>
+            android:src="@drawable/profile_zef"></ImageView>
 
         <TextView
             android:id="@+id/name_zefanya"
@@ -160,7 +160,7 @@
             android:layout_height="60dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
-            android:src="@drawable/profile"></ImageView>
+            android:src="@drawable/profile_james"></ImageView>
 
         <TextView
             android:id="@+id/name_james"
@@ -217,7 +217,7 @@
             android:layout_height="60dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
-            android:src="@drawable/profile"></ImageView>
+            android:src="@drawable/profile_dwynn"></ImageView>
 
         <TextView
             android:id="@+id/name_dwynn"
