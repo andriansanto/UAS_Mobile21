@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">uas_mobile</string>
+    <string name="activity">Activity</string>
+    <string name="profile">Profile</string>
+    <string name="rewards">Rewards</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="credits">Credits :</string>
+    <string name="wording">Promo menarik di dekat daerah mu jangan lupa untuk menukar point anda dengan voucher</string>
 </resources>
