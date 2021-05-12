@@ -218,7 +218,7 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/icon_account" />
+                    android:src="@drawable/icon_pickup" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
