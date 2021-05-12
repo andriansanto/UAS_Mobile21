@@ -57,11 +57,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:overScrollMode="never"
         android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_main2"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="99dp">
@@ -75,15 +75,190 @@
                 android:layout_height="400dp"
                 android:layout_margin="8dp"
                 android:contentDescription="@string/app_name"
-
                 android:foregroundGravity="center"
                 android:padding="8dp"
                 android:src="@drawable/box_submit_shadow"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="25dp"
                 tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="80dp"
+                android:text="Syarat Penjemputan Telah Terpenuhi. Berikut data pickup yang anda masukkan :"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="120dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="1. Jadwal Pick Up"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="220dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Senin, 26 April 21 15.00 WIB"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/biru"
+                android:textSize="13dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="230dp"
+                tools:layout_editor_absoluteY="210dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="2. Jenis Sampah : "
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="260dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:text="Plastic"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/biru"
+                android:textSize="13dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="230dp"
+                tools:layout_editor_absoluteY="260dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="3. Berat Sampah : "
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:layout_editor_absoluteX="70dp"
+                tools:layout_editor_absoluteY="290dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:text="5.60 KG"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/biru"
+                android:textSize="13dp"
+                android:gravity="center"
+                tools:layout_editor_absoluteX="230dp"
+                tools:layout_editor_absoluteY="290dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="SUBMIT"
+                android:textSize="15dp"
+                android:textColor="@color/kuning"
+                android:fontFamily="@font/baloo"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="387dp"
+                tools:ignore="MissingConstraints" />
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutt_main"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/bott_back"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/Icon_Home"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Home"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/Icon_Activity"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="Activity"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="124dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/Icon_Rewards"
+            tools:layout_editor_absoluteX="225dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="Rewards"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/Icon_Account"
+            tools:layout_editor_absoluteX="325dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="Account"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="324dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
