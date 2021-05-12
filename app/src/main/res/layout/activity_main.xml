@@ -176,7 +176,7 @@
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/wat_dash"
+                app:layout_constraintEnd_toStartOf="@id/pickup_dash"
                 app:layout_constraintTop_toBottomOf="@id/activity_dash">
 
                 <ImageView
@@ -185,7 +185,7 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/icon_rewards" />
+                    android:src="@drawable/icon_rewards"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -199,7 +199,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/wat_dash"
+                android:id="@+id/pickup_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -237,7 +237,7 @@
                 android:layout_marginTop="22dp"
                 android:background="@color/oren"
                 android:padding="20dp"
-                app:layout_constraintEnd_toEndOf="@id/wat_dash"
+                app:layout_constraintEnd_toEndOf="@id/pickup_dash"
                 app:layout_constraintStart_toStartOf="@id/reward_dash"
                 app:layout_constraintTop_toBottomOf="@id/reward_dash">
 

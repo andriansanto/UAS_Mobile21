@@ -32,6 +32,12 @@ public class Login_activity extends AppCompatActivity {
         btRegister = findViewById(R.id.reg);
         fAuth = FirebaseAuth.getInstance();
 
+        if (fAuth.getCurrentUser() != null)
+        {
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
+        }
+
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
