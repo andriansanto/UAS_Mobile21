@@ -27,7 +27,7 @@
             android:layout_height="18dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/Icon_Home">
+            android:src="@drawable/icon_home">
 
         </ImageView>
     </RelativeLayout>
@@ -281,7 +281,5 @@
 <!--            android:src="@drawable/Icon_Rewards">-->
 
 <!--        </ImageView> //relative-->
-
-    </RelativeLayout>
 
 </LinearLayout>

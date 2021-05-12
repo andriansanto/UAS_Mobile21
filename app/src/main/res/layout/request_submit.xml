@@ -78,7 +78,7 @@
 
                 android:foregroundGravity="center"
                 android:padding="8dp"
-                android:src="@drawable/Box_submit_shadow"
+                android:src="@drawable/box_submit_shadow"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="25dp"
                 tools:layout_editor_absoluteY="16dp" />

@@ -119,7 +119,7 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/Icon_Activity" />
+                    android:src="@drawable/icon_activity" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -152,7 +152,7 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/Icon_Account" />
+                    android:src="@drawable/icon_account" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -185,7 +185,7 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/Icon_Rewards" />
+                    android:src="@drawable/icon_rewards" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/Icon_Account" />
+                    android:src="@drawable/icon_account" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

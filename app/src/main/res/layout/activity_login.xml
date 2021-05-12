@@ -45,13 +45,25 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/biru"
         android:fontFamily="@font/montserrat"
         android:padding="10dp"
         android:text="Login"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <Button
+        android:id="@+id/reg"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/biru"
+        android:fontFamily="@font/montserrat"
+        android:padding="10dp"
+        android:text="Register"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="16sp" />

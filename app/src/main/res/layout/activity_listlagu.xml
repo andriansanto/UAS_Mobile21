@@ -135,7 +135,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="650dp"
-        android:background="@drawable/Icon_Home"/>
+        android:background="@drawable/icon_home"/>
     <TextView
         android:layout_marginTop="700dp"
         android:layout_marginLeft="46dp"
@@ -153,7 +153,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="135dp"
         android:layout_marginTop="650dp"
-        android:background="@drawable/Icon_Activity"/>
+        android:background="@drawable/icon_activity"/>
     <TextView
         android:layout_marginTop="700dp"
         android:layout_marginLeft="135dp"
@@ -171,7 +171,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="230dp"
         android:layout_marginTop="650dp"
-        android:background="@drawable/Icon_Rewards"/>
+        android:background="@drawable/icon_rewards"/>
     <TextView
         android:layout_marginTop="700dp"
         android:layout_marginLeft="227dp"
@@ -189,7 +189,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="325dp"
         android:layout_marginTop="650dp"
-        android:background="@drawable/Icon_Account"/>
+        android:background="@drawable/icon_account"/>
     <TextView
         android:layout_marginTop="700dp"
         android:layout_marginLeft="324dp"
