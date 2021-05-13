@@ -21,6 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,6 +59,11 @@ public class Register_activity extends AppCompatActivity {
                 String username = Username.getText().toString().trim();
                 String domisili = Domisili.getText().toString().trim();
                 String name = Nama.getText().toString().trim();
+                ArrayList<String> activity_name = new ArrayList<String>();
+                ArrayList<String> activity_credit = new ArrayList<String>();
+
+                activity_name.add("New User Promo");
+                activity_credit.add("+ 10000");
                 int umur = Integer.parseInt(String.valueOf(Umur.getText()));
 
                 if (TextUtils.isEmpty(name))
@@ -103,6 +110,8 @@ public class Register_activity extends AppCompatActivity {
                             user.put("Umur", umur);
                             user.put("Username", username);
                             user.put("Credit", 10000);
+                            user.put("Activity_name", activity_name);
+                            user.put("Activity_credit", activity_credit);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
