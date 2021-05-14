@@ -165,180 +165,91 @@
     <!--    ChallengeEnd-->
 
     <!--    SettingStart-->
-    <RelativeLayout
-        android:layout_width="355dp"
-        android:layout_height="54dp"
-        android:background="@color/abu"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="453dp">
-
-        <ImageView
-            android:id="@+id/icon_3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/tanda_setting"></ImageView>
-
-        <TextView
-            android:id="@+id/tanda_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-6dp"
-            android:layout_toRightOf="@+id/icon_3"
-            android:fontFamily="@font/baloo"
-            android:text="Settings"
-            android:textColor="@color/birudongker"
-            android:textSize="26dp"
-            android:textStyle="bold"></TextView>
-    </RelativeLayout>
-    <!--    SettingEnd-->
-
-    <!--    HelpStart-->
-
-    <RelativeLayout
-        android:layout_width="355dp"
-        android:layout_height="54dp"
-        android:background="@color/abu"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="527dp">
-
-        <ImageView
-            android:id="@+id/icon_4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/tanda_tanya"></ImageView>
-
-        <TextView
-            android:id="@+id/tanda_help"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-6dp"
-            android:layout_toRightOf="@+id/icon_4"
-            android:fontFamily="@font/baloo"
-            android:text="Help"
-            android:textColor="@color/birudongker"
-            android:textSize="26dp"
-            android:textStyle="bold"></TextView>
-    </RelativeLayout>
-    <!--    Help-->
-
-    <!--    Button Bawah-->
-    <RelativeLayout
-        android:layout_width="409dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutt_main"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/biru"
-        android:gravity="center"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="633dp">
+        android:background="@drawable/bott_back"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <!--Home-->
-
-        <!--Activity-->
-
-        <!--        Rewards-->
-
-        <!--        Account-->
-
-        <Button
-            android:id="@+id/application"
+        <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="18dp"
-            android:layout_toRightOf="@id/home"
-            android:background="@drawable/icon_activity" />
-
-        <Button
-            android:id="@+id/home"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/icon_home" />
-
+            android:src="@drawable/icon_home"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
         <TextView
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/home"
-            android:layout_marginTop="0dp"
-            android:fontFamily="@font/baloo"
+            android:layout_height="20dp"
             android:text="Home"
-            android:textAlignment="center"
-            android:textColor="@color/white"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
             android:textSize="15dp"
-            android:textStyle="bold" />
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_activity"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:layout_width="55dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/application"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="1dp"
-            android:layout_toRightOf="@id/home"
-            android:fontFamily="@font/baloo"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
             android:text="Activity"
-            android:textAlignment="center"
-            android:textColor="@color/white"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
             android:textSize="15dp"
-            android:textStyle="bold" />
+            tools:layout_editor_absoluteX="124dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/rewards"
+        <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="18dp"
-            android:layout_toRightOf="@id/application"
-            android:background="@drawable/icon_rewards" />
+            android:src="@drawable/icon_rewards"
+            tools:layout_editor_absoluteX="225dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/rewards"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="0dp"
-            android:layout_toRightOf="@id/application"
-            android:fontFamily="@font/baloo"
+            android:layout_height="20dp"
             android:text="Rewards"
-            android:textAlignment="center"
-            android:textColor="@color/white"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
             android:textSize="15dp"
-            android:textStyle="bold" />
+            tools:layout_editor_absoluteX="222dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/account"
+        <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="18dp"
-            android:layout_toRightOf="@id/rewards"
-            android:background="@drawable/icon_account_active" />
+            android:src="@drawable/icon_account_active"
+            tools:layout_editor_absoluteX="325dp"
+            tools:layout_editor_absoluteY="5dp"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/account"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="0dp"
-            android:layout_toRightOf="@id/rewards"
-            android:fontFamily="@font/baloo"
+            android:layout_height="20dp"
             android:text="Account"
-            android:textAlignment="center"
-            android:textColor="@color/white"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/birudongker"
             android:textSize="15dp"
-            android:textStyle="bold" />
+            tools:layout_editor_absoluteX="324dp"
+            tools:layout_editor_absoluteY="55dp"
+            tools:ignore="MissingConstraints" />
 
-    </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <!--    End-->
