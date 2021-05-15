@@ -26,7 +26,6 @@ public class TrackingNotif_activity extends AppCompatActivity {
         notif2 = findViewById(R.id.notif2);
         notif3 = findViewById(R.id.notif3);
         notif1.setBackgroundResource(R.drawable.pendukung_notif_2);
-        notif3.setBackgroundResource(R.drawable.pendukung_notif_1);
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override

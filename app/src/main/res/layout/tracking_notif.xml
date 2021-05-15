@@ -166,7 +166,7 @@
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@drawable/pendukung_notif_1"
+            android:background="@drawable/pendukung_notif_2"
             tools:layout_editor_absoluteX="15dp"
             tools:layout_editor_absoluteY="205dp" />
 
