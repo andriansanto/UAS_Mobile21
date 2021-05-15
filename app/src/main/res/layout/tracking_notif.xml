@@ -170,13 +170,6 @@
             tools:layout_editor_absoluteX="15dp"
             tools:layout_editor_absoluteY="205dp" />
 
-        <ImageView
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:background="@drawable/pendukung_notif_2"
-            tools:layout_editor_absoluteX="17dp"
-            tools:layout_editor_absoluteY="207dp"/>
-
         <TextView
             android:layout_width="220dp"
             android:layout_height="50dp"
