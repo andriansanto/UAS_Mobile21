@@ -65,7 +65,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/layoutt_main"
+            app:layout_constraintBottom_toTopOf="@id/bottom_main"
             app:layout_constraintTop_toBottomOf="@id/layout_main2">
 
             <!--Calendar-->
@@ -248,8 +248,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    <!--Bottom-->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutt_main"
+        android:id="@+id/bottom_main"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@drawable/bott_back"
@@ -257,83 +258,93 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
+            android:id="@+id/home"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/icon_home_active"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            android:src="@drawable/icon_home"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottom_main"
+            app:layout_constraintEnd_toStartOf="@+id/activity"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
             android:text="Home"
+            android:gravity="center"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/home"
+            app:layout_constraintStart_toStartOf="@id/home"
+            app:layout_constraintEnd_toEndOf="@id/home"/>
 
         <ImageView
+            android:id="@+id/activity"
             android:layout_width="50dp"
+            android:layout_marginTop="10dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_activity"
-            tools:layout_editor_absoluteX="125dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toEndOf="@id/home"
+            app:layout_constraintTop_toTopOf="@id/bottom_main"
+            app:layout_constraintEnd_toStartOf="@+id/rewards"/>
 
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
+            android:gravity="center"
             android:text="Activity"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/activity"
+            app:layout_constraintStart_toStartOf="@id/activity"
+            app:layout_constraintEnd_toEndOf="@id/activity" />
 
         <ImageView
+            android:id="@+id/rewards"
             android:layout_width="50dp"
+            android:layout_marginTop="10dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_rewards"
-            tools:layout_editor_absoluteX="225dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toEndOf="@+id/activity"
+            app:layout_constraintTop_toTopOf="@+id/bottom_main"
+            app:layout_constraintEnd_toStartOf="@+id/account"/>
 
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:text="Rewards"
+            android:gravity="center"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="222dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/rewards"
+            app:layout_constraintStart_toStartOf="@id/rewards"
+            app:layout_constraintEnd_toEndOf="@id/rewards"/>
 
         <ImageView
+            android:id="@+id/account"
+            android:layout_marginTop="10dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/icon_account"
-            tools:layout_editor_absoluteX="325dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            android:src="@drawable/icon_account_active"
+            app:layout_constraintStart_toEndOf="@id/rewards"
+            app:layout_constraintTop_toTopOf="@id/bottom_main"
+            app:layout_constraintEnd_toEndOf="@id/bottom_main" />
 
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:text="Account"
+            android:gravity="center"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="324dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
-
-
+            app:layout_constraintTop_toBottomOf="@id/account"
+            app:layout_constraintStart_toStartOf="@id/account"
+            app:layout_constraintEnd_toEndOf="@id/account"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+<!--End-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
