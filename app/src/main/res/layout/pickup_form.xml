@@ -44,16 +44,30 @@
         <TextView
             android:id="@+id/recash2"
             android:gravity="center"
-            android:layout_width="200dp"
+            android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="105dp"
-            android:text="Hello, Andrian Santo"
+            android:paddingEnd="-30dp"
+            android:text="Hello,"
             android:textColor="@color/birudongker"
             android:textSize="20dp"
             android:fontFamily="@font/baloo"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/recash3"/>
+
+        <TextView
+            android:id="@+id/recash3"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:text="User"
+            android:textColor="@color/birudongker"
+            android:textSize="20dp"
+            android:fontFamily="@font/baloo"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -63,6 +77,8 @@
         android:layout_marginTop="4dp"
         android:overScrollMode="never"
         android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_main2"
         tools:layout_editor_absoluteX="0dp">
 
@@ -82,22 +98,27 @@
                 android:textColor="@color/kuning"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="140dp"
-                tools:layout_editor_absoluteY="16dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/bt_datepicker"
+                tools:ignore="MissingConstraints" />
 
             <Button
                 android:id="@+id/bt_datepicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pilih Tanggal"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="143dp"
-                tools:layout_editor_absoluteY="49dp" />
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dateresult"
+                tools:ignore="MissingConstraints" />
             <!--            Calendar-->
 
             <!--            Jenis Sampah-->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="422dp"
                 android:layout_height="90dp"
                 android:background="@color/biru"
@@ -114,8 +135,9 @@
                     android:textColor="@color/birudongker"
                     android:textSize="18dp"
                     android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="148dp"
                     tools:layout_editor_absoluteY="3dp" />
 
                 <Button
@@ -188,16 +210,20 @@
                     android:textColor="@color/kuning"
                     android:textSize="18dp"
                     android:textStyle="bold"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="143dp"
-                    tools:layout_editor_absoluteY="25dp" />
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
 
 <!--                Box Berat-->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="180dp"
-                    android:layout_height="73dp"
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/biru"
-                    tools:layout_editor_absoluteX="118dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     tools:layout_editor_absoluteY="64dp">
 
                     <!--                    KG-->
