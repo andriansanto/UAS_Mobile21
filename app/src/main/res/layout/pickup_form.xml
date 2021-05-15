@@ -58,42 +58,175 @@
 
     <ScrollView
 
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="417dp"
+        android:layout_height="470dp"
+        android:layout_marginTop="4dp"
         android:overScrollMode="never"
         android:scrollbars="none"
         app:layout_constraintTop_toBottomOf="@id/layout_main2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="99dp">
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!--Calendar-->
 
             <TextView
+                android:id="@+id/tv_dateresult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"
                 android:text="Jadwal Pickup:"
                 android:textAlignment="center"
-                android:textSize="15dp"
+                android:textColor="@color/kuning"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 tools:ignore="MissingConstraints"
-                android:textColor="@color/kuning"
-                tools:layout_editor_absoluteX="142dp"
+                tools:layout_editor_absoluteX="140dp"
                 tools:layout_editor_absoluteY="16dp" />
 
-            <CalendarView
-                android:id="@+id/calenderView"
-                android:layout_width="293dp"
-                android:layout_height="289dp"
-                android:background="@drawable/bg_calen"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="59dp"
-                tools:layout_editor_absoluteY="39dp"></CalendarView>
-
             <Button
+                android:id="@+id/bt_datepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Tanggal"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="143dp"
+                tools:layout_editor_absoluteY="49dp" />
+            <!--            Calendar-->
+
+            <!--            Jenis Sampah-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="422dp"
+                android:layout_height="90dp"
+                android:background="@color/biru"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="-6dp"
+                tools:layout_editor_absoluteY="124dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Jenis Sampah:"
+                    android:textAlignment="center"
+                    android:textColor="@color/birudongker"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="148dp"
+                    tools:layout_editor_absoluteY="3dp" />
+
+                <Button
+                    android:id="@+id/btn_plastic"
+                    style="@drawable/btn_pick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/birumuda"
+                    android:fontFamily="@font/baloo"
+                    android:text="Plastic"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <Button
+                    android:id="@+id/btn_can"
+                    style="@drawable/btn_pick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/birumuda"
+                    android:fontFamily="@font/baloo"
+                    android:text="Can"
+                    tools:layout_editor_absoluteX="116dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <Button
+                    android:id="@+id/btn_paper"
+                    style="@drawable/btn_pick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/birumuda"
+                    android:fontFamily="@font/baloo"
+                    android:text="Paper"
+                    tools:layout_editor_absoluteX="217dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+                <Button
+                    android:id="@+id/btn_etc"
+                    style="@drawable/btn_pick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/birumuda"
+                    android:fontFamily="@font/baloo"
+                    android:text="Etc"
+                    tools:layout_editor_absoluteX="318dp"
+                    tools:layout_editor_absoluteY="30dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--            Berat Sampah-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="417dp"
+                android:layout_height="263dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="202dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Berat Sampah:"
+                    android:textAlignment="center"
+                    android:textColor="@color/kuning"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="143dp"
+                    tools:layout_editor_absoluteY="25dp" />
+
+<!--                Box Berat-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="180dp"
+                    android:layout_height="73dp"
+                    android:background="@color/biru"
+                    tools:layout_editor_absoluteX="118dp"
+                    tools:layout_editor_absoluteY="64dp">
+
+                    <!--                    KG-->
+
+                    <EditText
+                        android:layout_width="105dp"
+                        android:layout_height="65dp"
+                        android:background="@color/white"
+                        android:inputType="numberDecimal"
+                        tools:layout_editor_absoluteX="4dp"
+                        tools:layout_editor_absoluteY="4dp" />
+
+                    <TextView
+                        android:layout_width="67dp"
+                        android:layout_height="73dp"
+                        android:background="@color/birudongker"
+                        android:text="KG"
+                        android:textColor="@color/white"
+                        android:textSize="50dp"
+                        tools:layout_editor_absoluteX="113dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--Button Submit-->
+            <Button
+                android:id="@+id/btn_submitPickup"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:text="SUBMIT"
@@ -106,8 +239,8 @@
                 tools:ignore="MissingConstraints" />
 
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </ScrollView>
 
@@ -196,5 +329,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
