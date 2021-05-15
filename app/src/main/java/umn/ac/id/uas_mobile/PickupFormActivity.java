@@ -43,10 +43,10 @@ public class PickupFormActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.pickup_form);
 
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
-        Username = findViewById(R.id.recash3);
+        Username = findViewById(R.id.recash2);
         btnSubmit = findViewById(R.id.btn_submitPickup);
 
         fAuth = FirebaseAuth.getInstance();
@@ -58,7 +58,7 @@ public class PickupFormActivity extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                Username.setText(value.getString("Username"));
+                Username.setText("Hello, "+value.getString("Username"));
             }
         });
 

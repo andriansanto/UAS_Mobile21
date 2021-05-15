@@ -16,22 +16,25 @@
         android:layout_height="130dp"
         android:background="@drawable/header_background2"
         android:padding="10dp"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:id="@+id/recash"
-            android:gravity="center"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="25dp"
+            android:fontFamily="@font/baloo"
+
+            android:gravity="center"
             android:text="ReCash"
             android:textColor="@color/kuning"
             android:textSize="35dp"
-            android:fontFamily="@font/baloo"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,52 +42,31 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:background="@drawable/header_background3"
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_main">
+
         <TextView
             android:id="@+id/recash2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
             android:gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="105dp"
-            android:paddingEnd="-30dp"
             android:text="Hello,"
             android:textColor="@color/birudongker"
             android:textSize="20dp"
-            android:fontFamily="@font/baloo"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/recash3"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/recash3"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:text="User"
-            android:textColor="@color/birudongker"
-            android:textSize="20dp"
-            android:fontFamily="@font/baloo"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ScrollView
-
-        android:layout_width="417dp"
-        android:layout_height="470dp"
-        android:layout_marginTop="4dp"
-        android:overScrollMode="never"
-        android:scrollbars="none"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_main2"
-        tools:layout_editor_absoluteX="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/layoutt_main"
+            app:layout_constraintTop_toBottomOf="@id/layout_main2">
 
             <!--Calendar-->
 
@@ -119,12 +101,13 @@
             <!--            Jenis Sampah-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
-                android:layout_width="422dp"
+                android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:background="@color/biru"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="-6dp"
-                tools:layout_editor_absoluteY="124dp">
+                app:layout_constraintBottom_toTopOf="@+id/beratsampah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bt_datepicker">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -135,10 +118,10 @@
                     android:textColor="@color/birudongker"
                     android:textSize="18dp"
                     android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/btn_plastic"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteY="3dp" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <Button
                     android:id="@+id/btn_plastic"
@@ -146,12 +129,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
+                    android:layout_marginBottom="11dp"
                     android:layout_alignParentRight="true"
                     android:background="@color/birumuda"
                     android:fontFamily="@font/baloo"
                     android:text="Plastic"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="30dp" />
+                    app:layout_constraintEnd_toStartOf="@id/btn_can"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <Button
                     android:id="@+id/btn_can"
@@ -163,8 +148,9 @@
                     android:background="@color/birumuda"
                     android:fontFamily="@font/baloo"
                     android:text="Can"
-                    tools:layout_editor_absoluteX="116dp"
-                    tools:layout_editor_absoluteY="30dp" />
+                    app:layout_constraintStart_toEndOf="@id/btn_plastic"
+                    app:layout_constraintEnd_toStartOf="@id/btn_paper"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_plastic"/>
 
                 <Button
                     android:id="@+id/btn_paper"
@@ -176,11 +162,13 @@
                     android:background="@color/birumuda"
                     android:fontFamily="@font/baloo"
                     android:text="Paper"
-                    tools:layout_editor_absoluteX="217dp"
-                    tools:layout_editor_absoluteY="30dp" />
+                    app:layout_constraintBottom_toBottomOf="@id/btn_plastic"
+                    app:layout_constraintEnd_toStartOf="@id/btn_textile"
+                    app:layout_constraintStart_toEndOf="@id/btn_can"
+                    app:layout_constraintTop_toTopOf="@id/btn_plastic"/>
 
                 <Button
-                    android:id="@+id/btn_etc"
+                    android:id="@+id/btn_textile"
                     style="@drawable/btn_pick"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -188,87 +176,77 @@
                     android:layout_alignParentRight="true"
                     android:background="@color/birumuda"
                     android:fontFamily="@font/baloo"
-                    android:text="Etc"
-                    tools:layout_editor_absoluteX="318dp"
-                    tools:layout_editor_absoluteY="30dp" />
+                    android:text="Textile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_paper"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_plastic"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!--            Berat Sampah-->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="417dp"
-                android:layout_height="263dp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteY="202dp">
+            <TextView
+                android:id="@+id/beratsampah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Berat Sampah:"
+                android:textAlignment="center"
+                android:textColor="@color/kuning"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+                app:layout_constraintBottom_toTopOf="@id/constraintLayout2"/>
+
+            <LinearLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/biru"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/beratsampah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn_submitPickup">
+
+                <!--                    KG-->
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="65dp"
+                    android:background="@color/white"
+                    android:paddingTop="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:inputType="numberDecimal" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="Berat Sampah:"
-                    android:textAlignment="center"
-                    android:textColor="@color/kuning"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+                    android:layout_width="67dp"
+                    android:layout_height="73dp"
+                    android:background="@color/birudongker"
+                    android:text="KG"
+                    android:textColor="@color/white"
+                    android:textSize="50dp"/>
 
-<!--                Box Berat-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/biru"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="64dp">
-
-                    <!--                    KG-->
-
-                    <EditText
-                        android:layout_width="105dp"
-                        android:layout_height="65dp"
-                        android:background="@color/white"
-                        android:inputType="numberDecimal"
-                        tools:layout_editor_absoluteX="4dp"
-                        tools:layout_editor_absoluteY="4dp" />
-
-                    <TextView
-                        android:layout_width="67dp"
-                        android:layout_height="73dp"
-                        android:background="@color/birudongker"
-                        android:text="KG"
-                        android:textColor="@color/white"
-                        android:textSize="50dp"
-                        tools:layout_editor_absoluteX="113dp"
-                        tools:layout_editor_absoluteY="0dp" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
 <!--Button Submit-->
             <Button
                 android:id="@+id/btn_submitPickup"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
-                android:text="SUBMIT"
-                android:textSize="15dp"
                 android:backgroundTint="@color/birudongker"
-                android:textColor="@color/kuning"
                 android:fontFamily="@font/baloo"
-                tools:layout_editor_absoluteX="160dp"
-                tools:layout_editor_absoluteY="387dp"
-                tools:ignore="MissingConstraints" />
+                android:text="SUBMIT"
+                android:textColor="@color/kuning"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutt_main"

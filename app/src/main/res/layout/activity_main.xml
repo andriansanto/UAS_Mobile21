@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="25sp"
-            android:text="10,000 Points"
+            android:text="0"
             android:fontFamily="@font/baloo"
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp"

@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         btn_pick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Insert Activity here//
+                openPickFormActivity();
             }
         });
     }
@@ -94,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openLoginActivity(){
         Intent intent = new Intent(this, Login_activity.class);
+        startActivity(intent);
+    }
+    public void openPickFormActivity(){
+        Intent intent = new Intent(this, PickupFormActivity.class);
         startActivity(intent);
     }
 }
