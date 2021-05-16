@@ -1,202 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity"
-    >
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_main"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@drawable/header_background2"
-        android:padding="10dp"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/recash"
-            android:gravity="center"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="25dp"
-            android:text="ReCash"
-            android:textColor="@color/kuning"
-            android:textSize="35dp"
-            android:fontFamily="@font/baloo"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_background2"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout_main2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@drawable/header_background3"
+            <TextView
+                android:id="@+id/recash"
+                android:gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="95dp"
+                android:layout_marginTop="25dp"
+                android:text="ReCash"
+                android:textColor="@color/kuning"
+                android:textSize="35dp"
+                android:fontFamily="@font/baloo"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        app:layout_constraintTop_toBottomOf="@+id/layout_main">
-        <TextView
-            android:id="@+id/recash2"
-            android:gravity="center"
-            android:layout_width="200dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_main2"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginStart="105dp"
-            android:text="Hello Kunyuk!"
-            android:textColor="@color/birudongker"
-            android:textSize="20dp"
-            android:fontFamily="@font/baloo"
-            android:textStyle="bold"
+            android:background="@drawable/header_background3"
+            app:layout_constraintTop_toBottomOf="@+id/layout_main">
+
+            <TextView
+                android:id="@+id/recash2"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="Hello Kunyuk!"
+                android:textColor="@color/birudongker"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layar_background"
+            android:layout_width="350dp"
+            android:layout_height="270dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_main2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/notif"
-        android:layout_width="350dp"
-        android:layout_height="270dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/header_background2"
-        android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@id/layout_main2"
-        tools:layout_editor_absoluteX="30dp"
-        tools:ignore="MissingConstraints">
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/header_background2"
+            android:padding="10dp"
+            android:layout_marginTop="68dp">
 
         <ImageView
             android:id="@+id/notif1"
             android:layout_width="320dp"
             android:layout_height="50dp"
-            android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/header_background3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@id/layar_background"
+            app:layout_constraintTop_toTopOf="@id/layar_background"
+            app:layout_constraintEnd_toEndOf="@id/layar_background"/>
 
         <ImageView
+            android:id="@+id/bulet_pertama"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_marginStart="10dp"
             android:background="@drawable/pendukung_notif_1"
-            tools:layout_editor_absoluteX="15dp"
-            tools:layout_editor_absoluteY="25dp" />
+            app:layout_constraintTop_toTopOf="@+id/notif1"
+            app:layout_constraintStart_toStartOf="@id/notif1"
+            app:layout_constraintBottom_toBottomOf="@id/notif1"/>
 
         <TextView
-            android:layout_width="220dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/baloo"
             android:gravity="center"
-            android:text="Your driver has accept your request!"
+            android:maxLines="2"
+            android:layout_marginEnd="33dp"
+            android:text="Your driver has accept\n your request!"
             android:textColor="@color/white"
             android:textSize="16dp"
-            tools:layout_editor_absoluteX="60dp"
-            tools:layout_editor_absoluteY="10dp" />
+            app:layout_constraintTop_toTopOf="@+id/bulet_pertama"
+            app:layout_constraintBottom_toBottomOf="@id/bulet_pertama"
+            app:layout_constraintStart_toEndOf="@id/bulet_pertama"
+            app:layout_constraintEnd_toEndOf="@id/notif1" />
 
         <ImageView
+            android:id="@+id/garisbatas1"
             android:foregroundGravity="center"
             android:layout_width="120dp"
             android:layout_height="1dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/header_background3"
-            tools:layout_editor_absoluteX="110dp"
-            tools:layout_editor_absoluteY="70dp" />
+            app:layout_constraintTop_toBottomOf="@+id/notif1"
+            app:layout_constraintStart_toStartOf="@+id/notif1"
+            app:layout_constraintEnd_toEndOf="@id/notif1"/>
         <ImageView
-            android:foregroundGravity="center"
+            android:id="@+id/garisbatas2"
             android:layout_width="120dp"
             android:layout_height="1dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/header_background3"
-            tools:layout_editor_absoluteX="110dp"
-            tools:layout_editor_absoluteY="90dp" />
-
+            app:layout_constraintTop_toBottomOf="@id/garisbatas1"
+            app:layout_constraintStart_toStartOf="@id/garisbatas1"
+            app:layout_constraintEnd_toEndOf="@id/garisbatas1"/>
+        <ImageView
+            android:id="@+id/garisbatas3"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/header_background3"
+            app:layout_constraintTop_toBottomOf="@id/garisbatas2"
+            app:layout_constraintStart_toStartOf="@id/garisbatas1"
+            app:layout_constraintEnd_toEndOf="@id/garisbatas1"/>
         <ImageView
             android:id="@+id/notif2"
             android:layout_width="320dp"
             android:layout_height="50dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/header_background3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toBottomOf="@id/garisbatas3"
+            app:layout_constraintStart_toStartOf="@id/notif1"
+            app:layout_constraintEnd_toEndOf="@id/notif1"/>
         <ImageView
+            android:id="@+id/bulet_kedua"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_marginStart="10dp"
             android:background="@drawable/pendukung_notif_1"
-            tools:layout_editor_absoluteX="15dp"
-            tools:layout_editor_absoluteY="115dp" />
-
+            app:layout_constraintStart_toStartOf="@id/notif2"
+            app:layout_constraintTop_toTopOf="@id/notif2"
+            app:layout_constraintBottom_toBottomOf="@id/notif2"/>
         <TextView
-            android:layout_width="220dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/baloo"
             android:gravity="center"
-            android:text="Your driver is on the way to you!"
+            android:layout_marginEnd="30dp"
+            android:text="Your driver is \non the way to you!"
             android:textColor="@color/white"
             android:textSize="16dp"
-            tools:layout_editor_absoluteX="60dp"
-            tools:layout_editor_absoluteY="100dp" />
-
+            app:layout_constraintTop_toTopOf="@id/bulet_kedua"
+            app:layout_constraintBottom_toBottomOf="@id/bulet_kedua"
+            app:layout_constraintStart_toEndOf="@id/bulet_kedua"
+            app:layout_constraintEnd_toEndOf="@id/notif2"/>
         <ImageView
+            android:id="@+id/garisbatas4"
             android:layout_width="120dp"
             android:layout_height="1dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/header_background3"
-            tools:layout_editor_absoluteX="110dp"
-            tools:layout_editor_absoluteY="160dp"/>
-
+            app:layout_constraintTop_toBottomOf="@id/notif2"
+            app:layout_constraintStart_toStartOf="@id/garisbatas1"
+            app:layout_constraintEnd_toEndOf="@id/garisbatas1"/>
         <ImageView
+            android:id="@+id/garisbatas5"
             android:layout_width="120dp"
             android:layout_height="1dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/header_background3"
-            tools:layout_editor_absoluteX="110dp"
-            tools:layout_editor_absoluteY="180dp"/>
-
+            app:layout_constraintTop_toBottomOf="@id/garisbatas4"
+            app:layout_constraintStart_toStartOf="@id/garisbatas1"
+            app:layout_constraintEnd_toEndOf="@id/garisbatas1" />
+        <ImageView
+            android:id="@+id/garisbatas6"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/header_background3"
+            app:layout_constraintTop_toBottomOf="@id/garisbatas5"
+            app:layout_constraintStart_toStartOf="@id/garisbatas1"
+            app:layout_constraintEnd_toEndOf="@id/garisbatas1" />
         <ImageView
             android:id="@+id/notif3"
             android:layout_width="320dp"
             android:layout_height="50dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="190dp"
             android:background="@drawable/header_background3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toBottomOf="@id/garisbatas6"
+            app:layout_constraintStart_toStartOf="@+id/notif1"
+            app:layout_constraintEnd_toEndOf="@id/notif1"
+            app:layout_constraintBottom_toBottomOf="@id/layar_background"/>
         <ImageView
+            android:id="@+id/bulet_ketiga"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_marginStart="10dp"
             android:background="@drawable/pendukung_notif_2"
-            tools:layout_editor_absoluteX="15dp"
-            tools:layout_editor_absoluteY="205dp" />
-
+            app:layout_constraintStart_toStartOf="@id/notif3"
+            app:layout_constraintTop_toTopOf="@id/notif3"
+            app:layout_constraintBottom_toBottomOf="@id/notif3" />
         <TextView
-            android:layout_width="220dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/baloo"
             android:gravity="center"
-            android:text="Your driver has picked up your request!"
+            android:maxLines="2"
+            android:layout_marginEnd="33dp"
+            android:text="Your driver has picked up\n your request!"
             android:textColor="@color/white"
             android:textSize="16dp"
-            tools:layout_editor_absoluteX="60dp"
-            tools:layout_editor_absoluteY="190dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:backgroundTint="@color/birudongker"
-        android:fontFamily="@font/baloo"
-        android:text="ACCEPT"
-        android:textColor="@color/kuning"
-        android:textSize="16dp"
-        android:gravity="center"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="522dp" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutt_main"
+            app:layout_constraintTop_toTopOf="@id/bulet_ketiga"
+            app:layout_constraintBottom_toBottomOf="@id/bulet_ketiga"
+            app:layout_constraintStart_toEndOf="@id/bulet_ketiga"
+            app:layout_constraintEnd_toEndOf="@id/notif3"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_main"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@drawable/bott_back"
@@ -204,81 +228,92 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
+            android:id="@+id/home"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_home"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottom_main"
+            app:layout_constraintEnd_toStartOf="@+id/activity"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
             android:text="Home"
+            android:gravity="center"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/home"
+            app:layout_constraintStart_toStartOf="@id/home"
+            app:layout_constraintEnd_toEndOf="@id/home"/>
 
         <ImageView
+            android:id="@+id/activity"
             android:layout_width="50dp"
+            android:layout_marginTop="10dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_activity"
-            tools:layout_editor_absoluteX="125dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toEndOf="@id/home"
+            app:layout_constraintTop_toTopOf="@id/bottom_main"
+            app:layout_constraintEnd_toStartOf="@+id/rewards"/>
 
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
+            android:gravity="center"
             android:text="Activity"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/activity"
+            app:layout_constraintStart_toStartOf="@id/activity"
+            app:layout_constraintEnd_toEndOf="@id/activity" />
 
         <ImageView
+            android:id="@+id/rewards"
             android:layout_width="50dp"
+            android:layout_marginTop="10dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_rewards"
-            tools:layout_editor_absoluteX="225dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toEndOf="@+id/activity"
+            app:layout_constraintTop_toTopOf="@+id/bottom_main"
+            app:layout_constraintEnd_toStartOf="@+id/account"/>
 
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:text="Rewards"
+            android:gravity="center"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="222dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/rewards"
+            app:layout_constraintStart_toStartOf="@id/rewards"
+            app:layout_constraintEnd_toEndOf="@id/rewards"/>
 
         <ImageView
+            android:id="@+id/account"
+            android:layout_marginTop="10dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_account"
-            tools:layout_editor_absoluteX="325dp"
-            tools:layout_editor_absoluteY="5dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toEndOf="@id/rewards"
+            app:layout_constraintTop_toTopOf="@id/bottom_main"
+            app:layout_constraintEnd_toEndOf="@id/bottom_main" />
 
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:text="Account"
+            android:gravity="center"
             android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
             android:textSize="15dp"
-            tools:layout_editor_absoluteX="324dp"
-            tools:layout_editor_absoluteY="55dp"
-            tools:ignore="MissingConstraints" />
-
-
+            app:layout_constraintTop_toBottomOf="@id/account"
+            app:layout_constraintStart_toStartOf="@id/account"
+            app:layout_constraintEnd_toEndOf="@id/account"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
