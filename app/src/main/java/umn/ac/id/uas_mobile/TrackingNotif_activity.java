@@ -23,7 +23,7 @@ public class TrackingNotif_activity extends AppCompatActivity {
         setContentView(R.layout.tracking_notif);
         rumus_notif = total_time - 80000;
         notif1 = findViewById(R.id.notif1);
-        notif2 = findViewById(R.id.notif2);
+        notif2 = findViewById(R.id.notif2); 
         notif3 = findViewById(R.id.notif3);
         notif1.setBackgroundResource(R.drawable.pendukung_notif_2);
 
