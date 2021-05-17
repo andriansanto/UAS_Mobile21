@@ -97,6 +97,7 @@
         android:maxLines="1"
         android:singleLine="true"
         android:hint="Password"
+        android:inputType="textPassword"
         android:textColor="@color/white"
         android:textColorHint="@color/white"/>
 
@@ -108,7 +109,6 @@
         android:backgroundTint="@color/biru"
         android:fontFamily="@font/montserrat"
         android:padding="10dp"
-        android:inputType="textVisiblePassword"
         android:textAlignment="center"
         android:text="Submit"
         android:textSize="16sp"
