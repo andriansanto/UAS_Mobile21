@@ -41,205 +41,137 @@
         app:layout_constraintEnd_toEndOf="parent"/>
     <!--    My Account-->
 
-    <!--    Box-->
+    <!--    Profile Box-->
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="359dp"
-        android:layout_height="87dp"
+        android:layout_width="200dp"
+        android:layout_height="210dp"
         android:background="@color/biru"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/myacc">
 
         <ImageView
-            android:id="@+id/profile_zefanya"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/profile_zef"></ImageView>
+            android:id="@+id/profile_user"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:paddingTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/profile_james"
+            ></ImageView>
 
-
-        <TextView
-            android:id="@+id/name_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+        <Button
+            android:id="@+id/change_profile"
             android:layout_marginTop="5dp"
-            android:layout_toRightOf="@+id/profile_zefanya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_user"
+            android:layout_centerInParent="true"
+            android:background="@color/birudongker"
+            android:textColor="@color/kuning"
             android:fontFamily="@font/baloo"
-            android:text="Zefanya Wijaya"
-            android:textColor="@color/white"
-            android:textSize="22dp"></TextView>
-
-        <TextView
-            android:id="@+id/total_pointname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/name_user"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-6dp"
-            android:layout_toRightOf="@+id/profile_zefanya"
-            android:fontFamily="@font/montserrat"
-            android:text="Total Points:"
-            android:textColor="@color/birudongker"
-            android:textSize="16dp"
-            android:textStyle="bold"></TextView>
-
-        <TextView
-            android:id="@+id/total_point_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/total_pointname"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-5dp"
-            android:layout_toRightOf="@+id/profile_zefanya"
-            android:fontFamily="@font/montserrat"
-            android:text="10.000 Points"
-            android:textColor="@color/birudongker"
-            android:textSize="16dp"></TextView>
+            android:text="Change Profile Picture"
+            />
 
     </RelativeLayout>
-    <!--    box-->
-    <!--    Invite Friends-->
+    <!--    End Box-->
+
+    <!--    Box Edit Data-->
     <RelativeLayout
         android:id="@+id/relativeLayout1"
-        android:layout_width="355dp"
-        android:layout_height="54dp"
-        android:background="@color/abu"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@color/birudongker"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
         tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/icon_1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/tanda_activity"></ImageView>
-
-        <TextView
-            android:id="@+id/my_activity"
-            android:layout_width="wrap_content"
+        <!--nama-->
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-6dp"
-            android:layout_toRightOf="@+id/icon_1"
-            android:fontFamily="@font/baloo"
-            android:text="My Activity"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/biru"
+            android:hint="James Leopold"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
             android:textColor="@color/birudongker"
-            android:textSize="26dp"
-            android:textStyle="bold"></TextView>
-    </RelativeLayout>
-    <!--    Invite Friends End-->
-
-    <!--Challenges Start-->
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="355dp"
-        android:layout_height="54dp"
-        android:background="@color/abu"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout1">
-
-        <ImageView
-            android:id="@+id/icon_2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/tanda_rewards"></ImageView>
-
-        <TextView
-            android:id="@+id/my_rewards"
-            android:layout_width="wrap_content"
+            android:textColorHint="@color/white" />
+        <!--username-->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-6dp"
-            android:layout_toRightOf="@+id/icon_2"
-            android:fontFamily="@font/baloo"
-            android:text="My Rewards"
+            android:layout_below="@+id/nama"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/biru"
+            android:hint="WispX"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
             android:textColor="@color/birudongker"
-            android:textSize="26dp"
-            android:textStyle="bold"></TextView>
-    </RelativeLayout>
-    <!--    ChallengeEnd-->
-
-    <!--    Setting-->
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
-        android:layout_width="355dp"
-        android:layout_height="54dp"
-        android:background="@color/abu"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout2">
-
-        <ImageView
-            android:id="@+id/icon_3"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/tanda_setting"></ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:textColorHint="@color/white" />
+        <!--umur-->
+        <EditText
+            android:id="@+id/umur"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-6dp"
-            android:layout_toRightOf="@+id/icon_3"
-            android:fontFamily="@font/baloo"
-            android:text="Settings"
+            android:layout_below="@+id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/biru"
+            android:hint="20"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
             android:textColor="@color/birudongker"
-            android:textSize="26dp"
-            android:textStyle="bold"></TextView>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout4"
-        android:layout_width="355dp"
-        android:layout_height="54dp"
-        android:background="@color/abu"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_main"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout3">
-
-        <ImageView
-            android:id="@+id/icon_4"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/tanda_logout"
-            android:scaleX="-1"></ImageView>
-
-        <TextView
-            android:id="@+id/user_logout"
-            android:layout_width="wrap_content"
+            android:textColorHint="@color/white" />
+        <!--domisili-->
+        <EditText
+            android:id="@+id/domisili"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="-6dp"
-            android:layout_toRightOf="@+id/icon_4"
-            android:fontFamily="@font/baloo"
-            android:text="Logout"
+            android:layout_below="@+id/umur"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="7dp"
+            android:background="@color/biru"
+            android:hint="Tangerang"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textAlignment="center"
             android:textColor="@color/birudongker"
-            android:textSize="26dp"
-            android:textStyle="bold"></TextView>
+            android:textColorHint="@color/white" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/domisili"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/kuning"
+            android:fontFamily="@font/baloo"
+            android:padding="10dp"
+            android:text="SAVE"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
     </RelativeLayout>
+    <!--    Box Edit Data End-->
+
+
 
 
     <!--Bottom-->
