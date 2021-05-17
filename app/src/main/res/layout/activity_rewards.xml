@@ -54,24 +54,26 @@
             android:id="@+id/layout_nama"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_main"
             android:layout_margin="5dp"
-            tools:ignore="NotSibling">
+            app:layout_constraintTop_toBottomOf="@id/layout_main"
+            tools:ignore="NotSibling"
+            tools:layout_editor_absoluteX="101dp">
+
             <TextView
                 android:id="@+id/nama_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/baloo"
+                android:paddingLeft="10dp"
                 android:text="Andrian Santo"
                 android:textColor="@color/birudongker"
-                android:paddingLeft="10dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/baloo"
                 android:textSize="30dp"
+                android:textStyle="bold"
 
                 tools:ignore="MissingConstraints,NotSibling" />
             "
             />
-<!--            See Voucher-->
+            <!--            See Voucher-->
             <Button
                 android:id="@+id/btn_svc"
                 android:layout_width="wrap_content"
@@ -82,34 +84,33 @@
                 app:layout_constraintStart_toEndOf="@id/nama_user"
                 tools:ignore="MissingConstraints" />
 
-<!--            Box-->
+            <!--            Box-->
             <LinearLayout
                 android:id="@+id/constraintLayout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="9dp"
-                app:layout_constraintTop_toBottomOf="@id/nama_user"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nama_user"
                 tools:ignore="MissingConstraints">
 
                 <TextView
                     android:id="@+id/points_user"
                     android:layout_width="150dp"
                     android:layout_height="31dp"
-                    android:text="10.000 Points"
-                    android:textSize="20dp"
-                    android:textColor="@color/white"
                     android:background="@color/birudongker"
-                    />
-<!--Draw-->
+                    android:text="10.000 Points"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+                <!--Draw-->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:background="@color/biru"
                     android:text="Draw"
                     android:textColor="@color/birudongker"
-                    app:layout_constraintStart_toStartOf="@id/points_user"
-                    android:textSize="16dp" />
+                    android:textSize="16dp"
+                    app:layout_constraintStart_toStartOf="@id/points_user" />
 
             </LinearLayout>
 
@@ -124,44 +125,42 @@
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
                 tools:ignore="MissingConstraints">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                        <TextView
-                            android:id="@+id/tanggal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/baloo"
-                            android:text="Monday, 29 March 2021"
-                            android:textColor="@color/biru"
-                            android:textSize="26dp"
-                            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="Monday, 29 March 2021"
+                        android:textColor="@color/biru"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/msg_points"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/tanggal"
-                            android:fontFamily="@font/montserrat"
-                            android:textColor="@color/birudongker"
-                            android:text="Bought Musicfy premium for 4 months."
-                            >
+                    <TextView
+                        android:id="@+id/msg_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tanggal"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Bought Musicfy premium for 4 months."
+                        android:textColor="@color/birudongker">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/tanggal"
-                            android:layout_alignParentEnd="true"
-                            android:textAlignment="center"
-                            android:layout_toEndOf="@+id/msg_points"
-                            android:layout_toRightOf="@id/msg_points"
-                            android:text="-10.000 Points"
-                            android:textColor="@color/birudongker"
-                            android:textSize="15dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tanggal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toEndOf="@+id/msg_points"
+                        android:layout_toRightOf="@id/msg_points"
+                        android:text="-10.000 Points"
+                        android:textAlignment="center"
+                        android:textColor="@color/birudongker"
+                        android:textSize="15dp" />
 
-                    </RelativeLayout>
+                </RelativeLayout>
 
             </RelativeLayout>
 
