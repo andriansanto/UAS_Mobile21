@@ -10,6 +10,8 @@
     android:background="@color/birudongker">
 
 <!--    Meet-->
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -261,25 +263,12 @@
     </RelativeLayout>
     <!--Dwynn-->
 
-
-<!--        </ImageView>-->
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_toRightOf="@id/icon_ar"-->
-<!--            android:text="Colections"-->
-<!--            android:textColor="#202020"-->
-<!--            android:textSize="20dp"></TextView>-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="16dp"-->
-<!--            android:layout_height="16dp"-->
-<!--            android:layout_alignParentRight="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:src="@drawable/Icon_Rewards">-->
-
-<!--        </ImageView> //relative-->
+    <Button
+        android:id="@+id/btn_backhome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:text="Back to Home" />
 
 </LinearLayout>

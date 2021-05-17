@@ -146,7 +146,7 @@
                         android:layout_below="@+id/tanggal"
                         android:fontFamily="@font/montserrat"
                         android:text="Bought Musicfy premium for 4 months."
-                        android:textColor="@color/birudongker">
+                        android:textColor="@color/birudongker"/>
 
                     <TextView
                         android:layout_width="wrap_content"
