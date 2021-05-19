@@ -15,7 +15,7 @@
         <activity android:name=".Register_activity" />
         <activity android:name=".PickupFormActivity" />
         <activity android:name=".TrackingNotif_activity" />
-        <activity android:name=".credit_activity" />
+        <activity android:name=".My_activity" />
         <activity android:name=".Login_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

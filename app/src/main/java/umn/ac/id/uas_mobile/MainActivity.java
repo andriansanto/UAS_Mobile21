@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btn_activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openProfileActivity();
+                openMyActivity();
             }
         });
 
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         btn_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //insert activity//
+                openProfileActivity();
             }
         });
 
@@ -89,7 +88,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void openProfileActivity() {
-        Intent intent = new Intent(this, credit_activity.class);
+        Intent intent = new Intent(this, My_activity.class);
+        startActivity(intent);
+    }
+    public void openMyActivity() {
+        Intent intent = new Intent(this, My_activity.class);
         startActivity(intent);
     }
     public void openLoginActivity(){

@@ -54,133 +54,76 @@
             android:textSize="33dp"
             app:layout_constraintTop_toTopOf="@id/screenview"
             app:layout_constraintStart_toStartOf="@id/screenview"/>
-        <ImageView
-            android:id="@+id/kotak1"
-            android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:background="@drawable/grayback"
-            app:layout_constraintTop_toBottomOf="@+id/myactivity"
-            app:layout_constraintStart_toStartOf="@id/myactivity"
-            app:layout_constraintEnd_toStartOf="@id/kotak2"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Plastic"
-            android:textColor="@color/birudongker"
-            android:fontFamily="@font/baloo"
-            android:textSize="20dp"
-            app:layout_constraintTop_toTopOf="@id/kotak1"
-            app:layout_constraintStart_toStartOf="@id/kotak1"
-            app:layout_constraintEnd_toEndOf="@id/kotak1"
-            app:layout_constraintBottom_toBottomOf="@id/kotak1"/>
-        <ImageView
-            android:id="@+id/kotak2"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/grayback"
-            app:layout_constraintTop_toTopOf="@id/kotak1"
-            app:layout_constraintBottom_toBottomOf="@+id/kotak1"
-            app:layout_constraintStart_toEndOf="@id/kotak1"
-            app:layout_constraintEnd_toStartOf="@id/kotak3"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Can"
-            android:textColor="@color/birudongker"
-            android:fontFamily="@font/baloo"
-            android:textSize="20dp"
-            app:layout_constraintTop_toTopOf="@id/kotak2"
-            app:layout_constraintStart_toStartOf="@id/kotak2"
-            app:layout_constraintEnd_toEndOf="@id/kotak2"
-            app:layout_constraintBottom_toBottomOf="@id/kotak2"/>
 
-        <ImageView
+        <TextView
+            android:id="@+id/kotak1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grayback"
+            android:fontFamily="@font/baloo"
+            android:text="Plastic"
+            android:textAlignment="center"
+            android:textColor="@color/birudongker"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/kotakinfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myactivity"
+            app:layout_constraintEnd_toStartOf="@id/kotak2"/>
+
+        <TextView
+            android:id="@+id/kotak2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="Can"
+            android:textAlignment="center"
+            android:background="@drawable/grayback"
+            android:textColor="@color/birudongker"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/kotak1"
+            app:layout_constraintStart_toEndOf="@id/kotak1"
+            app:layout_constraintTop_toTopOf="@id/kotak1"
+            app:layout_constraintEnd_toStartOf="@id/kotak3"/>
+
+        <TextView
             android:id="@+id/kotak3"
             android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/grayback"
-            app:layout_constraintTop_toTopOf="@id/kotak1"
-            app:layout_constraintBottom_toBottomOf="@+id/kotak1"
-            app:layout_constraintStart_toEndOf="@id/kotak2"
-            app:layout_constraintEnd_toStartOf="@+id/kotak4"/>
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/grayback"
+            android:fontFamily="@font/baloo"
             android:text="Paper"
+            android:textAlignment="center"
             android:textColor="@color/birudongker"
-            android:fontFamily="@font/baloo"
             android:textSize="20dp"
-            app:layout_constraintTop_toTopOf="@id/kotak3"
-            app:layout_constraintStart_toStartOf="@id/kotak3"
-            app:layout_constraintEnd_toEndOf="@id/kotak3"
-            app:layout_constraintBottom_toBottomOf="@id/kotak3"/>
+            app:layout_constraintBottom_toBottomOf="@id/kotak1"
+            app:layout_constraintEnd_toStartOf="@id/kotak4"
+            app:layout_constraintStart_toEndOf="@id/kotak2"
+            app:layout_constraintTop_toTopOf="@id/kotak1"/>
 
-        <ImageView
+        <TextView
             android:id="@+id/kotak4"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:background="@drawable/grayback"
-            app:layout_constraintTop_toTopOf="@id/kotak1"
-            app:layout_constraintBottom_toBottomOf="@+id/kotak1"
-            app:layout_constraintStart_toEndOf="@id/kotak3"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
             android:text="Etc"
-            android:textColor="@color/birudongker"
-            android:fontFamily="@font/baloo"
-            android:textSize="20dp"
-            app:layout_constraintTop_toTopOf="@id/kotak4"
-            app:layout_constraintStart_toStartOf="@id/kotak4"
-            app:layout_constraintEnd_toEndOf="@id/kotak4"
-            app:layout_constraintBottom_toBottomOf="@id/kotak4"/>
-        
-        <ImageView
-            android:id="@+id/kotakinfo"
-            android:layout_width="380dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="20dp"
+            android:textAlignment="center"
             android:background="@drawable/grayback"
-            app:layout_constraintTop_toBottomOf="@id/kotak1"
-            app:layout_constraintStart_toStartOf="@id/kotak1" />
-        <TextView
-            android:id="@+id/infotanggal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toTopOf="@id/kotakinfo"
-            app:layout_constraintStart_toStartOf="@id/kotakinfo"
-            android:fontFamily="@font/baloo"
-            android:textColor="@color/biru"
-            android:text="Monday, 29 March 2021"
-            android:textSize="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            app:layout_constraintTop_toBottomOf="@id/infotanggal"
-            app:layout_constraintStart_toStartOf="@id/kotakinfo"
-            android:fontFamily="@font/baloo"
             android:textColor="@color/birudongker"
-            android:text="Submit 6.5 kg of Plastic"
-            android:textSize="15dp" />
-        <TextView
-            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@id/kotak3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/kotak1"
+            app:layout_constraintBottom_toBottomOf="@+id/kotak1"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/kotakinfo"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-           android:layout_marginEnd="10dp"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/baloo"
-            android:textColor="@color/birudongker"
-            android:text="+6.500pt"
-            android:textSize="15dp"
-            app:layout_constraintTop_toTopOf="@id/kotakinfo"
-            app:layout_constraintBottom_toBottomOf="@id/kotakinfo"
-            app:layout_constraintEnd_toEndOf="@id/kotakinfo"/>
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/kotak4"
+            app:layout_constraintStart_toStartOf="@id/kotak1"
+            app:layout_constraintTop_toBottomOf="@id/kotak1" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
