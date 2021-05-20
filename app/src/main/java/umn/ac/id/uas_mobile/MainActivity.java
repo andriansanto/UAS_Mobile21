@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openPickFormActivity(){
-        Intent intent = new Intent(this, TrackingNotif_activity.class);
+        Intent intent = new Intent(this, PickupFormActivity.class);
         startActivity(intent);
     }
 }
