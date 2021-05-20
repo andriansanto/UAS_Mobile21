@@ -88,20 +88,12 @@ public class PickupFormActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actname.add("Submit "+choice);
-                actdate.add(dateFormatter.format(Calendar.getInstance().getTime()));
-                int kg = Integer.parseInt(berat.getText().toString().trim());
-                credits += 1000 * kg;
-                actcredit.add("+ "+ 1000*kg);
-
-                Map<String, Object> data = new HashMap<>();
-                data.put("Activity_name", actname);
-                data.put("Activity_credit", actcredit);
-                data.put("Activity_date", actdate);
-                data.put("Credit", credits);
-
-                fStore.collection("Users").document(userID)
-                        .set(data, SetOptions.merge());
+                Intent intent = new Intent(getApplicationContext(), Request_submit.class);
+                intent.putExtra("actcredit", actcredit);
+                intent.putExtra("actname",actname);
+                intent.putExtra("actdate",actdate);
+                intent.putExtra("credit", credits);
+                startActivity(intent);
             }
         });
 
