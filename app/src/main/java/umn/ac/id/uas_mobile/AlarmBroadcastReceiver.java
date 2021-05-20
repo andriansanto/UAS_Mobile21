@@ -14,20 +14,22 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
     private NotificationManagerCompat notif_manager;
     private Notification notif;
     public static final String CHANNEL_ID = "ALARM_SERVICE_CHANNEL";
-    public static final String CHANNEL_NAME = "Testing";
-    public static final String CHANNEL_DESC = "Test123 masuk";
+    public static final String CHANNEL_NAME = "ReCash Pickup";
+    public static final String CHANNEL_DESC = "Notifikasi Status Pickup Sampah";
     public static final int NOTIFICATION_ID = 1337;
+    private int counter;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         notif = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setSound(null)
-                .setContentTitle("Testing pertama")
-                .setContentText("1 2 3 1 2 3 test test")
+                .setContentTitle("Recash Status Pickup")
+                .setContentText("Status Pickup Sampah telah berubah! Cek Status Penjemputanmu sekarang!")
                 .setSmallIcon(R.drawable.ic_alarm)
                 .setVibrate(new long[0])
                 .build();
+        counter = counter + 1;
         notif_manager = NotificationManagerCompat.from(context);
 
         //mChannel buat API > 26
@@ -41,7 +43,6 @@ public class AlarmBroadcastReceiver extends BroadcastReceiver {
 
             notif_manager.createNotificationChannel(mChannel);
         }
-        notif_manager.notify(1, notif);
+            notif_manager.notify(1, notif);
     }
-
 }
