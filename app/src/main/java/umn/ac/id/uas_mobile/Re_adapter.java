@@ -13,14 +13,14 @@ import java.util.ArrayList;
 
 public class Re_adapter extends RecyclerView.Adapter<Re_adapter.Myviewholder> {
 
-    ArrayList<String> act_name;
-    ArrayList<String> act_credit;
+    ArrayList<String> act_name, act_credit, act_date;
     Context context;
 
-    public Re_adapter(Context ct, ArrayList<String> activity_name, ArrayList<String> activity_credit){
+    public Re_adapter(Context ct, ArrayList<String> activity_name, ArrayList<String> activity_credit, ArrayList<String> activity_date){
         this.context = ct;
         this.act_name = activity_name;
-        this.act_credit =activity_credit;
+        this.act_credit = activity_credit;
+        this.act_date = activity_date;
 
     }
 
@@ -36,6 +36,7 @@ public class Re_adapter extends RecyclerView.Adapter<Re_adapter.Myviewholder> {
     public void onBindViewHolder(@NonNull Myviewholder holder, int position) {
         holder.act_name.setText(act_name.get(position));
         holder.act_credit.setText(act_credit.get(position));
+        holder.date.setText(act_date.get(position));
     }
 
     @Override
@@ -44,12 +45,13 @@ public class Re_adapter extends RecyclerView.Adapter<Re_adapter.Myviewholder> {
     }
 
     public class Myviewholder extends RecyclerView.ViewHolder {
-        TextView act_name, act_credit;
+        TextView act_name, act_credit,date;
 
         public Myviewholder(@NonNull View itemView) {
             super(itemView);
             act_credit = itemView.findViewById(R.id.act_credit);
             act_name = itemView.findViewById(R.id.act_name);
+            date = itemView.findViewById(R.id.date);
         }
     }
 }

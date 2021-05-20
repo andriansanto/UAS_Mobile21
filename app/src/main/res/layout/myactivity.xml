@@ -19,18 +19,18 @@
 
         <TextView
             android:id="@+id/recash"
-            android:gravity="center"
             android:layout_width="200dp"
             android:layout_height="80dp"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="25dp"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
             android:text="ReCash"
             android:textColor="@color/kuning"
             android:textSize="35dp"
-            android:fontFamily="@font/baloo"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

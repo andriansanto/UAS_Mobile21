@@ -41,10 +41,11 @@ public class My_activity extends AppCompatActivity {
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                ArrayList<String> actname, actcredit;
+                ArrayList<String> actname, actcredit, actdate;
                 actname = (ArrayList<String>) value.get("Activity_name");
                 actcredit = (ArrayList<String>) value.get("Activity_credit");
-                Re_adapter re_adapter = new Re_adapter(getApplicationContext(), actname, actcredit);
+                actdate = (ArrayList<String>) value.get("Activity_date");
+                Re_adapter re_adapter = new Re_adapter(getApplicationContext(), actname, actcredit, actdate);
                 recyclerView.setAdapter(re_adapter);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
             }
