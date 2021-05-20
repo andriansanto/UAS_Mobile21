@@ -22,8 +22,12 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.lang.reflect.Array;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Register_activity extends AppCompatActivity {
@@ -61,9 +65,16 @@ public class Register_activity extends AppCompatActivity {
                 String name = Nama.getText().toString().trim();
                 ArrayList<String> activity_name = new ArrayList<String>();
                 ArrayList<String> activity_credit = new ArrayList<String>();
+                ArrayList<String> activity_date = new ArrayList<String>();
+                Date c = Calendar.getInstance().getTime();
+
+                SimpleDateFormat df = new SimpleDateFormat("EEEE, dd-MMM-yyyy", Locale.getDefault());
+                String formattedDate = df.format(c);
 
                 activity_name.add("New User Promo");
                 activity_credit.add("+ 10000");
+                activity_date.add(formattedDate);
+
                 int umur = Integer.parseInt(String.valueOf(Umur.getText()));
 
                 if (TextUtils.isEmpty(name))
@@ -112,6 +123,7 @@ public class Register_activity extends AppCompatActivity {
                             user.put("Credit", 10000);
                             user.put("Activity_name", activity_name);
                             user.put("Activity_credit", activity_credit);
+                            user.put("Activity_date", activity_date);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
