@@ -211,6 +211,7 @@
                 <!--                    KG-->
 
                 <EditText
+                    android:id="@+id/berat"
                     android:layout_width="100dp"
                     android:layout_height="65dp"
                     android:background="@color/white"

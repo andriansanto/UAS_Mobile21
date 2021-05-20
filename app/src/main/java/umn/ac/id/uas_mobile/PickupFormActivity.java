@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.SetOptions;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
@@ -34,11 +36,14 @@ public class PickupFormActivity extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private TextView tvDateResult;
-    private Button btDatePicker, btnSubmit;
+    private Button btDatePicker, btnSubmit, btnPlastic, btnCan, btnPaper, btnTextile;
     private TextView Username;
+    private EditText berat;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
-    String userID;
+    String userID, choice, date;
+    ArrayList<String> actname, actdate, actcredit;
+    int credits;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +53,11 @@ public class PickupFormActivity extends AppCompatActivity {
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         Username = findViewById(R.id.recash2);
         btnSubmit = findViewById(R.id.btn_submitPickup);
+        btnPlastic = findViewById(R.id.btn_plastic);
+        btnCan = findViewById(R.id.btn_can);
+        btnPaper = findViewById(R.id.btn_paper);
+        btnTextile = findViewById(R.id.btn_textile);
+        berat = findViewById(R.id.berat);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -59,6 +69,10 @@ public class PickupFormActivity extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                 Username.setText("Hello, "+value.getString("Username"));
+                actname = (ArrayList<String>) value.get("Activity_name");
+                actcredit = (ArrayList<String>) value.get("Activity_credit");
+                actdate = (ArrayList<String>) value.get("Activity_date");
+                credits = value.getLong("Credit").intValue();
             }
         });
 
@@ -74,12 +88,64 @@ public class PickupFormActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            // Add a new document with a generated ID
+                actname.add("Submit "+choice);
+                actdate.add(dateFormatter.format(Calendar.getInstance().getTime()));
+                int kg = Integer.parseInt(berat.getText().toString().trim());
+                credits += 1000 * kg;
+                actcredit.add("+ "+ 1000*kg);
+
                 Map<String, Object> data = new HashMap<>();
-                data.put("capital", true);
+                data.put("Activity_name", actname);
+                data.put("Activity_credit", actcredit);
+                data.put("Activity_date", actdate);
+                data.put("Credit", credits);
 
                 fStore.collection("Users").document(userID)
                         .set(data, SetOptions.merge());
+            }
+        });
+
+        btnPaper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnPaper.setBackgroundResource(R.color.birujanda);
+                btnCan.setBackgroundResource(R.color.birumuda);
+                btnPlastic.setBackgroundResource(R.color.birumuda);
+                btnTextile.setBackgroundResource(R.color.birumuda);
+                choice = btnPaper.getText().toString().trim();
+            }
+        });
+
+        btnCan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnPaper.setBackgroundResource(R.color.birumuda);
+                btnCan.setBackgroundResource(R.color.birujanda);
+                btnPlastic.setBackgroundResource(R.color.birumuda);
+                btnTextile.setBackgroundResource(R.color.birumuda);
+                choice = btnCan.getText().toString().trim();
+            }
+        });
+
+        btnTextile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnPaper.setBackgroundResource(R.color.birumuda);
+                btnCan.setBackgroundResource(R.color.birumuda);
+                btnPlastic.setBackgroundResource(R.color.birumuda);
+                btnTextile.setBackgroundResource(R.color.birujanda);
+                choice = btnTextile.getText().toString().trim();
+            }
+        });
+
+        btnPlastic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnPaper.setBackgroundResource(R.color.birumuda);
+                btnCan.setBackgroundResource(R.color.birumuda);
+                btnPlastic.setBackgroundResource(R.color.birujanda);
+                btnTextile.setBackgroundResource(R.color.birumuda);
+                choice = btnPlastic.getText().toString().trim();
             }
         });
 
@@ -107,6 +173,7 @@ public class PickupFormActivity extends AppCompatActivity {
                  * Update TextView dengan tanggal yang kita pilih
                  */
                 tvDateResult.setText("Jadwal Pickup : "+dateFormatter.format(newDate.getTime()));
+                date = dateFormatter.format((Calendar.getInstance().getTime()));
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
@@ -120,4 +187,3 @@ public class PickupFormActivity extends AppCompatActivity {
 
 
 } /*End*/
-
