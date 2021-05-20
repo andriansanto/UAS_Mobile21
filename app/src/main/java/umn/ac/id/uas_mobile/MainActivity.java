@@ -19,74 +19,74 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout btn_activity, btn_profile, btn_rewards, btn_pick;
-    TextView Username, Credits;
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-    String userID;
+        LinearLayout btn_activity, btn_profile, btn_rewards, btn_pick;
+        TextView Username, Credits;
+        FirebaseAuth fAuth;
+        FirebaseFirestore fStore;
+        String userID;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Username = (TextView) findViewById(R.id.username);
-        Credits = (TextView) findViewById(R.id.credits);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            Username = (TextView) findViewById(R.id.username);
+            Credits = (TextView) findViewById(R.id.credits);
 
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-        userID = fAuth.getCurrentUser().getUid();
+            fAuth = FirebaseAuth.getInstance();
+            fStore = FirebaseFirestore.getInstance();
+            userID = fAuth.getCurrentUser().getUid();
 
-        DocumentReference documentReference = fStore.collection("Users").document(userID);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                Username.setText(value.getString("Username"));
-                Credits.setText(value.getLong("Credit").toString() + " Points");
-            }
-        });
+            DocumentReference documentReference = fStore.collection("Users").document(userID);
+            documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                    Username.setText(value.getString("Username"));
+                    Credits.setText(value.getLong("Credit").toString() + " Points");
+                }
+            });
 
-        btn_activity = (LinearLayout) findViewById(R.id.activity_dash);
-        btn_activity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMyActivity();
-            }
-        });
+            btn_activity = (LinearLayout) findViewById(R.id.activity_dash);
+            btn_activity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openMyActivity();
+                }
+            });
 
-        btn_profile = (LinearLayout) findViewById(R.id.profile_dash);
-        btn_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openProfileActivity();
-            }
-        });
+            btn_profile = (LinearLayout) findViewById(R.id.profile_dash);
+            btn_profile.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openProfileActivity();
+                }
+            });
 
-        btn_profile = (LinearLayout) findViewById(R.id.profile_dash);
-        btn_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openProfileActivity();
-            }
-        });
+            btn_profile = (LinearLayout) findViewById(R.id.profile_dash);
+            btn_profile.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openProfileActivity();
+                }
+            });
 
-        btn_rewards = (LinearLayout) findViewById(R.id.reward_dash);
-        btn_rewards.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Toast.makeText(MainActivity.this, "Logged Out",Toast.LENGTH_SHORT).show();
-                openLoginActivity();
-            }
-        });
+            btn_rewards = (LinearLayout) findViewById(R.id.reward_dash);
+            btn_rewards.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    FirebaseAuth.getInstance().signOut();
+                    Toast.makeText(MainActivity.this, "Logged Out",Toast.LENGTH_SHORT).show();
+                    openLoginActivity();
+                }
+            });
 
-        btn_pick = (LinearLayout) findViewById(R.id.pickup_dash);
-        btn_pick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openPickFormActivity();
-            }
-        });
-    }
+            btn_pick = (LinearLayout) findViewById(R.id.pickup_dash);
+            btn_pick.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openPickFormActivity();
+                }
+            });
+        }
     public void openProfileActivity() {
         Intent intent = new Intent(this, My_activity.class);
         startActivity(intent);
