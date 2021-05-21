@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/baloo"
                 android:paddingLeft="10dp"
-                android:text="Andrian Santo"
+                android:text="User"
                 android:textColor="@color/birudongker"
                 android:textSize="30dp"
                 android:textStyle="bold"
@@ -74,15 +74,6 @@
             "
             />
             <!--            See Voucher-->
-            <Button
-                android:id="@+id/btn_svc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
-                android:background="@drawable/btn_pick"
-                android:text="Back"
-                app:layout_constraintStart_toEndOf="@id/nama_user"
-                tools:ignore="MissingConstraints"/>
 
             <!--            Box-->
             <LinearLayout
@@ -110,7 +101,7 @@
 <!--            Box Netflix-->
             <RelativeLayout
                 android:id="@+id/relativeLayout1"
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/abu"
@@ -119,31 +110,36 @@
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
                 tools:ignore="MissingConstraints">
 
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_box"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/nama_voucher"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
                         android:fontFamily="@font/baloo"
                         android:text="Netplix 1 Month"
                         android:textColor="@color/biru"
-                        android:textSize="26dp"
-                        android:textStyle="bold" />
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/harga_points"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/harga_points"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nama_voucher"
                         android:fontFamily="@font/montserrat"
                         android:text="25.000 Points"
-                        android:textColor="@color/birudongker"/>
+                        android:textColor="@color/birudongker"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/nama_voucher"
+                        app:layout_constraintTop_toBottomOf="@+id/nama_voucher" />
 
                     <Button
                         android:id="@+id/buy_netplix"
@@ -151,15 +147,17 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerInParent="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="4dp"
                         android:background="@color/biru"
                         android:fontFamily="@font/baloo"
                         android:text="BUY"
                         android:textColor="@color/white"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginEnd="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </RelativeLayout>
 <!--            Box Netflix End-->
@@ -167,7 +165,7 @@
 <!--            Box Musicfy-->
             <RelativeLayout
                 android:id="@+id/relativeLayout2"
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/abu"
@@ -176,47 +174,52 @@
                 app:layout_constraintTop_toBottomOf="@+id/relativeLayout1"
                 tools:ignore="MissingConstraints">
 
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_box2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="75dp">
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/nama_voucher2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/baloo"
                         android:text="Musicfy 1 Month"
                         android:textColor="@color/biru"
-                        android:textSize="26dp"
-                        android:textStyle="bold" />
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/harga_points2"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/harga_points2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nama_voucher2"
                         android:fontFamily="@font/montserrat"
                         android:text="10.000 Points"
-                        android:textColor="@color/birudongker"/>
+                        android:textColor="@color/birudongker"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/nama_voucher2"
+                        app:layout_constraintTop_toBottomOf="@+id/nama_voucher2" />
 
                     <Button
                         android:id="@+id/buy_musicfy"
                         android:layout_width="50dp"
                         android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerInParent="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="25dp"
                         android:background="@color/biru"
                         android:fontFamily="@font/baloo"
                         android:text="BUY"
                         android:textColor="@color/white"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </RelativeLayout>
 <!--            Box Musicfy End-->
@@ -224,7 +227,7 @@
 <!--            KaEfCi Super Besar 2-->
             <RelativeLayout
                 android:id="@+id/relativeLayout3"
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/abu"
@@ -233,31 +236,36 @@
                 app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
                 tools:ignore="MissingConstraints">
 
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_box3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/nama_voucher3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/baloo"
                         android:text="Super Besar 2 - KaEfCi"
                         android:textColor="@color/biru"
-                        android:textSize="26dp"
-                        android:textStyle="bold" />
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/harga_points3"/>
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/harga_points3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nama_voucher3"
                         android:fontFamily="@font/montserrat"
                         android:text="30.000 Points"
-                        android:textColor="@color/birudongker"/>
+                        android:textColor="@color/birudongker"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/nama_voucher3"
+                        app:layout_constraintTop_toBottomOf="@+id/nama_voucher3" />
 
                     <Button
                         android:id="@+id/buy_kfc"
@@ -265,15 +273,17 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerInParent="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="4dp"
                         android:background="@color/biru"
                         android:fontFamily="@font/baloo"
                         android:text="BUY"
                         android:textColor="@color/white"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginEnd="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </RelativeLayout>
 <!--            KaEfCi Super Besar 2 End-->
@@ -281,7 +291,7 @@
 <!--            Diamond Mobile Lejen-->
             <RelativeLayout
                 android:id="@+id/relativeLayout4"
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/abu"
@@ -291,31 +301,36 @@
                 app:layout_constraintTop_toBottomOf="@+id/relativeLayout3"
                 tools:ignore="MissingConstraints">
 
-                <RelativeLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_box4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/nama_voucher4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/baloo"
                         android:text="100 DM - Mobile Lejen"
                         android:textColor="@color/biru"
-                        android:textSize="26dp"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="20dp"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/harga_points4"/>
 
                     <TextView
-                        android:layout_marginLeft="10dp"
                         android:id="@+id/harga_points4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nama_voucher4"
                         android:fontFamily="@font/montserrat"
                         android:text="15.000 Points"
-                        android:textColor="@color/birudongker"/>
+                        android:textColor="@color/birudongker"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/nama_voucher4"
+                        app:layout_constraintTop_toBottomOf="@+id/nama_voucher4" />
 
                     <Button
                         android:id="@+id/buy_dm"
@@ -323,15 +338,17 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerInParent="true"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="4dp"
                         android:background="@color/biru"
                         android:fontFamily="@font/baloo"
                         android:text="BUY"
                         android:textColor="@color/white"
-                        android:textSize="20dp" />
+                        android:textSize="20dp"
+                        android:layout_marginEnd="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </RelativeLayout>
 <!--            Diamond Mobile Lejen End-->

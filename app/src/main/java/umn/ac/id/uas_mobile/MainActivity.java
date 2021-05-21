@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openRewardActivity(){
-        Intent intent = new Intent(this, Rewards_Activity.class);
+        Intent intent = new Intent(this, See_voucher_activity.class);
         startActivity(intent);
     }
     public void openPickFormActivity(){

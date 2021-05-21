@@ -60,17 +60,21 @@ public class Rewards_Activity extends AppCompatActivity {
     public void openFooterHome() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     };
     public void openFooterAcc() {
         Intent intent = new Intent(this, Account_activity.class);
         startActivity(intent);
+        finish();
     }
     public void openFooterAct() {
         Intent intent = new Intent(this, My_activity.class);
         startActivity(intent);
+        finish();
     }
     public void openFooterRewards() {
         Intent intent = new Intent(this, Rewards_Activity.class);
         startActivity(intent);
+        finish();
     }
 }

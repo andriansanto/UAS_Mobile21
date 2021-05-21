@@ -85,19 +85,23 @@ public class My_activity extends AppCompatActivity {
 
     public void openFooterHome() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     };
     public void openFooterAcc() {
         Intent intent = new Intent(this, Account_activity.class);
         startActivity(intent);
+        finish();
     }
     public void openFooterAct() {
         Intent intent = new Intent(this, My_activity.class);
         startActivity(intent);
+        finish();
     }
     public void openFooterRewards() {
         Intent intent = new Intent(this, Rewards_Activity.class);
         startActivity(intent);
+        finish();
     }
 
 }

@@ -19,6 +19,7 @@
         <activity android:name=".Request_submit"/>
         <activity android:name=".Account_activity"/>
         <activity android:name=".Setting_activity"/>
+        <activity android:name=".See_voucher_activity"/>
         <activity android:name=".Rewards_Activity"/>
         <activity android:name=".Login_activity" >
             <intent-filter>
