@@ -124,6 +124,7 @@ public class Register_activity extends AppCompatActivity {
                             user.put("Activity_name", activity_name);
                             user.put("Activity_credit", activity_credit);
                             user.put("Activity_date", activity_date);
+                            user.put("Domisili", domisili);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

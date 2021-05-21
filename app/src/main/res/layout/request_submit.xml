@@ -111,14 +111,13 @@
                             app:layout_constraintStart_toStartOf="@id/batas" />
 
                         <TextView
-                            android:id="@+id/nama_voucher"
+                            android:id="@+id/date_pickup"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/baloo"
                             android:gravity="center"
-                            android:layout_marginStart="30dp"
                             android:maxLines="2"
-                            android:text="Senin, 26 April 21 \n 15.00 WIB"
+                            android:text="Date"
                             android:textColor="@color/biru"
                             android:textSize="13dp"
                             app:layout_constraintStart_toEndOf="@id/jadwalpickup"
@@ -142,9 +141,8 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/baloo"
                             android:gravity="center"
-                            android:text="Plastic"
+                            android:text="Type"
                             android:textColor="@color/biru"
-                            android:layout_marginStart="30dp"
                             android:textSize="13dp"
                             app:layout_constraintStart_toEndOf="@id/jenissampah"
                             app:layout_constraintTop_toTopOf="@id/jenissampah"
@@ -167,8 +165,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/baloo"
                             android:gravity="center"
-                            android:text="5.60 KG"
-                            android:layout_marginStart="30dp"
+                            android:text="Berat"
                             android:textColor="@color/biru"
                             android:textSize="13dp"
                             app:layout_constraintStart_toEndOf="@id/beratsampah"
@@ -181,6 +178,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     <Button
+        android:id="@+id/request_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/birudongker"
@@ -188,10 +186,11 @@
         android:text="SUBMIT"
         android:textColor="@color/kuning"
         android:textSize="15dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_main"
         android:layout_width="match_parent"

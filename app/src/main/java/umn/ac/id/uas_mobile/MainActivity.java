@@ -72,11 +72,7 @@ public class MainActivity extends AppCompatActivity {
             btn_rewards = (LinearLayout) findViewById(R.id.reward_dash);
             btn_rewards.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-                    FirebaseAuth.getInstance().signOut();
-                    Toast.makeText(MainActivity.this, "Logged Out",Toast.LENGTH_SHORT).show();
-                    openLoginActivity();
-                }
+                public void onClick(View view) { openRewardActivity(); }
             });
 
             btn_pick = (LinearLayout) findViewById(R.id.pickup_dash);
@@ -88,15 +84,15 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     public void openProfileActivity() {
-        Intent intent = new Intent(this, My_activity.class);
+        Intent intent = new Intent(this, Account_activity.class);
         startActivity(intent);
     }
     public void openMyActivity() {
         Intent intent = new Intent(this, My_activity.class);
         startActivity(intent);
     }
-    public void openLoginActivity(){
-        Intent intent = new Intent(this, Login_activity.class);
+    public void openRewardActivity(){
+        Intent intent = new Intent(this, Rewards_Activity.class);
         startActivity(intent);
     }
     public void openPickFormActivity(){

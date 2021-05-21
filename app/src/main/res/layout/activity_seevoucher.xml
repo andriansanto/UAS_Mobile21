@@ -104,14 +104,6 @@
                     android:textAlignment="center"
                     android:textSize="20dp" />
                 <!--Draw-->
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:background="@color/biru"
-                    android:text="Draw"
-                    android:textColor="@color/birudongker"
-                    android:textSize="16dp"
-                    app:layout_constraintStart_toStartOf="@id/points_user" />
 
             </LinearLayout>
 

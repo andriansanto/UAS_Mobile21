@@ -3,6 +3,7 @@ package umn.ac.id.uas_mobile;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -43,14 +44,14 @@ public class PickupFormActivity extends AppCompatActivity {
     FirebaseAuth fAuth;
     String userID, choice, date;
     ArrayList<String> actname, actdate, actcredit;
-    int credits;
+    int credits, kg;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pickup_form);
 
-        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        dateFormatter = new SimpleDateFormat("EEEE, dd-MMM-yyyy", Locale.US);
         Username = findViewById(R.id.recash2);
         btnSubmit = findViewById(R.id.btn_submitPickup);
         btnPlastic = findViewById(R.id.btn_plastic);
@@ -88,11 +89,37 @@ public class PickupFormActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (TextUtils.isEmpty(date))
+                {
+                    btDatePicker.setError("PLease pick a date");
+                    return;
+                }
+                if (TextUtils.isEmpty(choice))
+                {
+                    btnSubmit.setError("Please Choose type");
+                    return;
+                }
+                if (TextUtils.isEmpty(berat.getText().toString()))
+                {
+                    btnSubmit.setError("Please insert weight");
+                    return;
+                }
+
+                kg = Integer.parseInt(berat.getText().toString().trim());
+
+                actdate.add(date);
+                actname.add("Submit "+choice);
+                actcredit.add("+ "+ kg*1000);
+                credits += kg*1000;
+
                 Intent intent = new Intent(getApplicationContext(), Request_submit.class);
                 intent.putExtra("actcredit", actcredit);
                 intent.putExtra("actname",actname);
                 intent.putExtra("actdate",actdate);
                 intent.putExtra("credit", credits);
+                intent.putExtra("choice",choice);
+                intent.putExtra("berat",kg);
                 startActivity(intent);
             }
         });
@@ -165,7 +192,7 @@ public class PickupFormActivity extends AppCompatActivity {
                  * Update TextView dengan tanggal yang kita pilih
                  */
                 tvDateResult.setText("Jadwal Pickup : "+dateFormatter.format(newDate.getTime()));
-                date = dateFormatter.format((Calendar.getInstance().getTime()));
+                date = dateFormatter.format(newDate.getTime());
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));

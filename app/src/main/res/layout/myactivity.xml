@@ -59,7 +59,7 @@
             android:id="@+id/kotakinfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50dp"
+            android:paddingTop="80dp"
             android:paddingBottom="40dp"
             android:paddingEnd="20dp"
             android:paddingStart="20dp"

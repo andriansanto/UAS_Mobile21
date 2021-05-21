@@ -9,17 +9,36 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TrackingNotif_activity extends AppCompatActivity {
     private Context konteks;
     private int rumus_notif;
+    private TextView user;
     private ImageView bullet1, bullet2, bullet3;
     private AlarmManager alarm_manager;
+
+    FirebaseFirestore fstore;
+    FirebaseAuth fauth;
+    String userID;
 
     //Contoh 4 menit (240s x 1000 = 240000ms)
     //FOR DEBUG 2 menit (120s x 1000 = 120000ms)
@@ -38,6 +57,24 @@ public class TrackingNotif_activity extends AppCompatActivity {
         bullet3 = findViewById(R.id.bulet_ketiga);
         bullet1.setBackgroundResource(R.drawable.pendukung_notif_2);
         bullet3.setBackgroundResource(R.drawable.pendukung_notif_1);
+        user = findViewById(R.id.recash2);
+
+        ArrayList<String> actname = (ArrayList<String>)getIntent().getExtras().getSerializable("actname");
+        ArrayList<String> actcredit = (ArrayList<String>)getIntent().getExtras().getSerializable("actcredit");
+        ArrayList<String> actdate = (ArrayList<String>)getIntent().getExtras().getSerializable("actdate");
+        int credits = getIntent().getIntExtra("credit",0);
+
+        fauth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
+        userID = fauth.getCurrentUser().getUid();
+
+        DocumentReference documentReference = fstore.collection("Users").document(userID);
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                user.setText("Hello "+value.getString("Username"));
+            }
+        });
 
 
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
@@ -61,6 +98,22 @@ public class TrackingNotif_activity extends AppCompatActivity {
                 bullet3.setBackgroundResource(R.drawable.pendukung_notif_2);
                 Toast.makeText(TrackingNotif_activity.this, "Pengantar Jemput telah mengambil sampahmu! Credit telah ditambahkan", Toast.LENGTH_LONG).show();
                 /*CODE FIREBASE UNTUK PENAMBAHAN JUMLAH CREDIT */
+                Map<String, Object> data = new HashMap<>();
+                data.put("Activity_name", actname);
+                data.put("Activity_credit", actcredit);
+                data.put("Activity_date", actdate);
+                data.put("Credit", credits);
+                fstore.collection("Users").document(userID)
+                        .set(data, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(TrackingNotif_activity.this, "Pickup telah selesai",Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(TrackingNotif_activity.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                    }
+                });
+
                 Log.i("DEBUG-TEST", "Testing - Masuk Status 3");
             }
         }, total_time);

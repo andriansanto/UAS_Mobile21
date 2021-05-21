@@ -57,21 +57,9 @@
             android:layout_height="150dp"
             android:paddingTop="5dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/profile_james"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_account"
             ></ImageView>
-
-        <Button
-            android:id="@+id/change_profile"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_user"
-            android:layout_centerInParent="true"
-            android:background="@color/birudongker"
-            android:textColor="@color/kuning"
-            android:fontFamily="@font/baloo"
-            android:text="Change Profile Picture"
-            />
 
     </RelativeLayout>
     <!--    End Box-->

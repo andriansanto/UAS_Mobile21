@@ -57,7 +57,7 @@
             android:layout_height="60dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
-            android:src="@drawable/profile_zef"></ImageView>
+            android:src="@drawable/ic_account"></ImageView>
 
 
         <TextView

@@ -17,6 +17,9 @@
         <activity android:name=".TrackingNotif_activity" />
         <activity android:name=".My_activity" />
         <activity android:name=".Request_submit"/>
+        <activity android:name=".Account_activity"/>
+        <activity android:name=".Setting_activity"/>
+        <activity android:name=".Rewards_Activity"/>
         <activity android:name=".Login_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
