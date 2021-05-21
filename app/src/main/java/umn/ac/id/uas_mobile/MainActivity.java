@@ -3,11 +3,15 @@ package umn.ac.id.uas_mobile;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
             Username = (TextView) findViewById(R.id.username);
             Credits = (TextView) findViewById(R.id.credits);
+            Toolbar toolbar = (Toolbar)findViewById(R.id.menuimage);
+            setSupportActionBar(toolbar);
 
             fAuth = FirebaseAuth.getInstance();
             fStore = FirebaseFirestore.getInstance();
@@ -83,6 +89,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.listmenu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menugan:
+                Intent gotoProfile = new Intent(MainActivity.this, Setting_activity.class);
+                startActivityForResult(gotoProfile, 1);
+                break;
+
+            case R.id.logoutmas:
+                    FirebaseAuth.getInstance().signOut();
+                    Toast.makeText(MainActivity.this, "Logged Out",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, Login_activity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     public void openProfileActivity() {
         Intent intent = new Intent(this, Account_activity.class);
         startActivity(intent);
