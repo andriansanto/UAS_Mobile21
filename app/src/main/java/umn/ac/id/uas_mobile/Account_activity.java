@@ -67,7 +67,7 @@ public class Account_activity extends AppCompatActivity {
         rewards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Account_activity.this, Rewards_Activity.class);
+                Intent intent = new Intent(Account_activity.this, See_voucher_activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -115,7 +115,7 @@ public class Account_activity extends AppCompatActivity {
             }
         });
         footerrewards = findViewById(R.id.rewards);
-        footeracc.setOnClickListener(new View.OnClickListener() {
+        footerrewards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFooterRewards();
@@ -139,7 +139,7 @@ public class Account_activity extends AppCompatActivity {
         finish();
     }
     public void openFooterRewards() {
-        Intent intent = new Intent(this, Rewards_Activity.class);
+        Intent intent = new Intent(this, See_voucher_activity.class);
         startActivity(intent);
         finish();
     }

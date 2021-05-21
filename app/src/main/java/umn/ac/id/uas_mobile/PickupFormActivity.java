@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +36,7 @@ import java.util.Locale;
 import java.util.Map;
 
 public class PickupFormActivity extends AppCompatActivity {
+    ImageView footerhome,footeract,footerrewards,footeracc;
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private TextView tvDateResult;
@@ -45,6 +48,7 @@ public class PickupFormActivity extends AppCompatActivity {
     String userID, choice, date;
     ArrayList<String> actname, actdate, actcredit;
     int credits, kg;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -168,6 +172,35 @@ public class PickupFormActivity extends AppCompatActivity {
             }
         });
 
+        footerhome = findViewById(R.id.home);
+        footerhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterHome();
+            }
+        });
+        footeracc = findViewById(R.id.account);
+        footeracc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterAcc();
+            }
+        });
+        footeract = findViewById(R.id.activity);
+        footeract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterAct();
+            }
+        });
+        footerrewards = findViewById(R.id.rewards);
+        footerrewards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterRewards();
+            }
+        });
+
     }//onCreate
 
     private void showDateDialog(){
@@ -202,6 +235,27 @@ public class PickupFormActivity extends AppCompatActivity {
          */
         datePickerDialog.show();
     }//Showdatedialog
+
+    public void openFooterHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    };
+    public void openFooterAcc() {
+        Intent intent = new Intent(this, Account_activity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void openFooterAct() {
+        Intent intent = new Intent(this, My_activity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void openFooterRewards() {
+        Intent intent = new Intent(this, See_voucher_activity.class);
+        startActivity(intent);
+        finish();
+    }
 
 
 

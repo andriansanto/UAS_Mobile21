@@ -75,7 +75,7 @@ public class My_activity extends AppCompatActivity {
             }
         });
         footerrewards = findViewById(R.id.rewards);
-        footeracc.setOnClickListener(new View.OnClickListener() {
+        footerrewards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFooterRewards();
@@ -85,8 +85,8 @@ public class My_activity extends AppCompatActivity {
 
     public void openFooterHome() {
         Intent intent = new Intent(this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+        finish();
     };
     public void openFooterAcc() {
         Intent intent = new Intent(this, Account_activity.class);
@@ -99,7 +99,7 @@ public class My_activity extends AppCompatActivity {
         finish();
     }
     public void openFooterRewards() {
-        Intent intent = new Intent(this, Rewards_Activity.class);
+        Intent intent = new Intent(this, See_voucher_activity.class);
         startActivity(intent);
         finish();
     }

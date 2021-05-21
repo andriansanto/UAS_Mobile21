@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +38,7 @@ public class See_voucher_activity  extends AppCompatActivity {
     String userID;
     ArrayList<String> actname, actdate, actcredit;
     TextView points,name;
+    ImageView footerhome,footeract,footerrewards,footeracc;
     int credits;
 
     @Override
@@ -224,8 +226,55 @@ public class See_voucher_activity  extends AppCompatActivity {
             }
         });
 
+        footerhome = findViewById(R.id.home);
+        footerhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterHome();
+            }
+        });
+        footeracc = findViewById(R.id.account);
+        footeracc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterAcc();
+            }
+        });
+        footeract = findViewById(R.id.activity);
+        footeract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterAct();
+            }
+        });
+        footerrewards = findViewById(R.id.rewards);
+        footerrewards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterRewards();
+            }
+        });
 
-
+    }
+    public void openFooterHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    };
+    public void openFooterAcc() {
+        Intent intent = new Intent(this, Account_activity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void openFooterAct() {
+        Intent intent = new Intent(this, My_activity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void openFooterRewards() {
+        Intent intent = new Intent(this, See_voucher_activity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

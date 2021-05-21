@@ -58,11 +58,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/kotakinfo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="80dp"
-            android:paddingBottom="40dp"
-            android:paddingEnd="20dp"
-            android:paddingStart="20dp"
+            android:layout_height="450dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

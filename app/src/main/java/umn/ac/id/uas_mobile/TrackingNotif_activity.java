@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,7 @@ public class TrackingNotif_activity extends AppCompatActivity {
     private TextView user;
     private ImageView bullet1, bullet2, bullet3;
     private AlarmManager alarm_manager;
+    ImageView footerhome,footeract,footerrewards,footeracc;
 
     FirebaseFirestore fstore;
     FirebaseAuth fauth;
@@ -117,6 +119,35 @@ public class TrackingNotif_activity extends AppCompatActivity {
                 Log.i("DEBUG-TEST", "Testing - Masuk Status 3");
             }
         }, total_time);
+
+        footerhome = findViewById(R.id.home);
+        footerhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterHome();
+            }
+        });
+        footeracc = findViewById(R.id.account);
+        footeracc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterAcc();
+            }
+        });
+        footeract = findViewById(R.id.activity);
+        footeract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterAct();
+            }
+        });
+        footerrewards = findViewById(R.id.rewards);
+        footerrewards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFooterRewards();
+            }
+        });
     }
 
     protected void TimeReceiver(int random_time) {
@@ -130,5 +161,26 @@ public class TrackingNotif_activity extends AppCompatActivity {
         alarm_manager.setExact(
                 AlarmManager.RTC_WAKEUP, kalender.getTimeInMillis(), p_intent
         );
+    }
+
+    public void openFooterHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    };
+    public void openFooterAcc() {
+        Intent intent = new Intent(this, Account_activity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void openFooterAct() {
+        Intent intent = new Intent(this, My_activity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void openFooterRewards() {
+        Intent intent = new Intent(this, See_voucher_activity.class);
+        startActivity(intent);
+        finish();
     }
 }

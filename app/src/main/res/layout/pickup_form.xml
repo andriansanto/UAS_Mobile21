@@ -266,7 +266,7 @@
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/bottom_main"
-            app:layout_constraintEnd_toStartOf="@+id/activity"/>
+            app:layout_constraintEnd_toStartOf="@id/activity"/>
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
@@ -287,7 +287,8 @@
             android:src="@drawable/icon_activity"
             app:layout_constraintStart_toEndOf="@id/home"
             app:layout_constraintTop_toTopOf="@id/bottom_main"
-            app:layout_constraintEnd_toStartOf="@+id/rewards"/>
+            app:layout_constraintEnd_toStartOf="@id/rewards"/>
+
 
         <TextView
             android:layout_width="60dp"
@@ -307,9 +308,9 @@
             android:layout_marginTop="10dp"
             android:layout_height="50dp"
             android:src="@drawable/icon_rewards"
-            app:layout_constraintStart_toEndOf="@+id/activity"
-            app:layout_constraintTop_toTopOf="@+id/bottom_main"
-            app:layout_constraintEnd_toStartOf="@+id/account"/>
+            app:layout_constraintStart_toEndOf="@id/activity"
+            app:layout_constraintTop_toTopOf="@id/bottom_main"
+            app:layout_constraintEnd_toStartOf="@id/account"/>
 
         <TextView
             android:layout_width="60dp"
@@ -328,7 +329,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/icon_account_active"
+            android:src="@drawable/icon_account"
             app:layout_constraintStart_toEndOf="@id/rewards"
             app:layout_constraintTop_toTopOf="@id/bottom_main"
             app:layout_constraintEnd_toEndOf="@id/bottom_main" />
