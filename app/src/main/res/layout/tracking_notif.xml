@@ -231,7 +231,7 @@
             android:id="@+id/home"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/icon_home"
+            android:src="@drawable/icon_rumah_active"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/bottom_main"
